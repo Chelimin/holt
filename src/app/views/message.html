@@ -1,0 +1,17 @@
+<div>
+  <h1>Write Message!</h1>
+  <p class="lead">
+    Catherine put your card here.
+    <form>
+      <div class="form-group">
+        <label for="from">From</label>
+        <input type="text" class="form-control" id="from" placeholder="From" ng-model="name">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" class="form-control" id="message" placeholder="Message" ng-model="msg">
+      </div>
+      <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Write!</span></a></p>
+    </form>
+  </p>
+</div>

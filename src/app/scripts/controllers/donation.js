@@ -8,7 +8,7 @@
  * Controller of the dayspringApp
  */
 angular.module('dayspringApp')
-  .controller('MainCtrl', function () {
+  .controller('DonationCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
