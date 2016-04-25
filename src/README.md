@@ -5,7 +5,20 @@ version 0.15.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Install dependencies:
+
+```
+npm install
+npm install -g gulp
+npm install -g bower
+bower install
+```
+
+Running the development app:
+
+```
+gulp serve
+```
 
 ## Testing
 
