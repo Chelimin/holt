@@ -1,0 +1,32 @@
+/*SLIDER SECTION*/
+#slider-form {
+  padding: 20px;
+}
+.slider-label-1 {
+  border: 2px solid black;
+  padding: 10px;
+}
+#textInput {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    width: 150px;
+    margin-right: 25px;
+}
+
+/*DONATION DESCRIPTION SECTION*/
+#description {
+  border: 5px solid grey;
+  padding: 20px;
+}
+#cause-image {
+  border-left: 5px solid grey;
+}
+
+/*FINAL AMOUNT DIV*/
+#final-amt-div{
+    width: 300px;
+    border: 2px solid black;
+    margin: 0 auto;
+    display: block;
+}
