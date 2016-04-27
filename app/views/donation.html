@@ -1,65 +1,58 @@
 <!--GABRIELLE'S SLIDER-->
-<div class="container">
-        <form id="slider-form">
-           <!--My $ will-->
-            <div class="row valign-wrapper">
-                <h1 class="col s3">MY</h1>
-                <div id="top-amount" class="valign-wrapper center-align">
-                   <h3 class="col s1">$</h3>
-                    <input id="textInput" class= "col s11 valign center-align" type="number" name="amountInput" value="10"/>
-                </div>
-                <h1 class="col s3">WILL...</h1>
+   <form id="slider-form">
+     <!--My $ will-->
+      <div class="row valign-wrapper">
+          <h1 class="col s3">MY</h1>
+          <div id="top-amount" class="valign-wrapper center-align">
+             <h3 class="col s1">$</h3>
+              <input id="textInput" class= "col s11 valign center-align" type="number" name="amountInput" value="10"/>
+          </div>
+          <h1 class="col s3">WILL...</h1>
+      </div>
+
+     <!--Cause Box-->
+      <div class="row" id="description">
+        <div class="col l6 m6 s12" id="description-text">
+            <h3 id="cause" class="center-align">BASIC</h3>
+             <p id="cause-description" class="center-align">Description 1</p>
+        </div>
+        <div class="col l6 m6 s12 center-align">
+          <img id="cause-image" src="https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050" width="300px" height="auto">
+        </div>
+      </div>
+
+      <!--Slider Labels-->
+      <div id="slider" class="row">
+          <div id="slider-labels">
+            <span id="slider-label-1" class="col s2">basic</span>
+            <span id="slider-label-2" class="col s2">clinical</span>
+            <span id="slider-label-3" class="col s2">education</span>
+            <span id="slider-label-4" class="col s2">future</span>
+            <span id="slider-label-5" class="col s2">others</span>
+            <span id="slider-label-6" class="col s2">others</span>
+          </div>
+      </div>
+
+     <!--Slider-->
+      <input id="sliderInput" class= "row col s6" type="range" name="amountRange" min="10" max="1200" value="10" step="10"/>
+
+      <!--Final Amount-->
+      <div class="valign-wrapper row">
+         <div id="final-amt-div" class="valign center-align">
+            <h3 id ="final-amt" class="center-align">Donate $10</h3>
+            <div class="row center-align">
+               <a class="btn orange darken-1">Once</a>
+               <a class="btn orange darken-1">Monthly</a>
             </div>
+         </div>
+      </div>
 
-           <!--Cause Box-->
-            <div class="row" id="description">
-              <div class="col s6" id="description-text">
-                  <h3 id="cause">Cause 1</h3>
-                    <p id="cause-description">Description 1</p>
-              </div>
-              <div class="col s6">
-                <img id="cause-image" src="https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050" width="300px" height="auto">
-              </div>
-            </div>
-
-            <!--Slider Labels-->
-            <div id="slider" class="row">
-                <div id="slider-labels">
-                  <span id="slider-label-1" class="col s2">basic</span>
-                  <span id="slider-label-2" class="col s2">clinical</span>
-                  <span id="slider-label-3" class="col s2">education</span>
-                  <span id="slider-label-4" class="col s2">future</span>
-                  <span id="slider-label-5" class="col s2">others</span>
-                  <span id="slider-label-6" class="col s2">others</span>
-                </div>
-            </div>
-
-           <!--Slider-->
-            <input id="sliderInput" class= "row col s6" type="range" name="amountRange" min="5" max="1200" value="10"/>
-
-           <!--Final Amount-->
-           <div class="valign-wrapper row">
-                <div id="final-amt-div" class="valign center-align">
-                     <h3 id ="final-amt" class="center-align">Donate $10</h3>
-                    <div class="row center-align">
-                        <a class="btn orange darken-1
-    ">Once</a>
-                        <a class="btn orange darken-1
-    ">Monthly</a>
-                    </div>
-
-                </div>
-            </div>
-
-        </form>
-    </div>
+   </form>
 <!--END OF GABRIELLE'S SLIDER-->
 
 <!-- CREDIT CARD FORM! -->
 
   <!-- NAV TABS FOR FORMS -->
-  <div class="container">
-
     <div class="row">
       <div class="col s12">
         <ul class="tabs">
@@ -174,53 +167,58 @@
     </div>
 
     <div class="row">
-      <div class="input-field col s12">
-        <button class="btn waves-effect waves-light #fb8c00 orange darken-1" type="submit" name="action">
+      <div class="row">
+        <button class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s12" type="submit" name="action">
           SUBMIT
         </button>
       </div>
     </div>
-
   </div>
 
   <script>
      $( function pageLoaded(){
+
+      //SCRIPT FOR FORM
+      $('ul.tabs').tabs();
+      $('a').css('textDecoration','none');
+
+      //SCRIPT FOR SLIDER
          var array = [
              //Range 1
              {
                  cause: "BASIC",
                  causeDescription: "lala",
-                 image: " ",
+                 image: "https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
              },
              //Range 2
              {
                  cause: "CLINICAL",
                  causeDescription: "lala",
-                 image: " ",
+                 image: "https://images.unsplash.com/photo-1444792131309-2e517032ded6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
              },
              //Range 3
              {
                  cause: "EDUCATION",
                  causeDescription: "lala",
-                 image: " ",
+                 image: "https://images.unsplash.com/photo-1435186376919-88c211714029?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
              },
              //Range 4
              {
                  cause: "FUTURE",
                  causeDescription: "lala",
-                 image: " ",
+                 image: "https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a877bb72752a01bdc4a0f76f29db3239",
              },
              //Range 5
              {
                  cause: "OMG YOU'RE SO GENEROUS!",
                  causeDescription: "lala",
-                 image: " ",
+                 image:"https://images.unsplash.com/photo-1452541735531-b68f5e769257?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=ba419de0a36ed119ff28c47bce4d276e",
              },
              //Range 6
              {
                  cause: "OTHERS",
                  causeDescription: "lala",
-                 image: " ",
+                 image:"https://images.unsplash.com/photo-1457542553555-6331c3c0855f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4cfbf6c77cb568aa061e5a05110ffcb9",
              }
          ]
          console.log("page is loaded!");
@@ -242,35 +240,39 @@
              if (value < 200) {
                  $("#cause").html(array[0].cause);
                  $("#cause-description").html(array[0].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050").css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-1').css({'background': 'grey'});
+                 $("#cause-image").attr("src", array[0].image).css({'width' : '300px' , 'height' : 'auto'});
+                 $('#slider-label-1').css({'background': '#ffecb3'});
                  //$("#cause-image").prepend('<img src="array[0].image"/>');
              }
-             else if (201 < value && value < 400) {
+             else if (value < 400) {
                  $("#cause").html(array[1].cause);
                  $("#cause-description").html(array[1].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1444792131309-2e517032ded6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050").css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-2').css({'background': 'red'});
+                 $("#cause-image").attr("src", array[1].image).css({'width' : '300px' , 'height' : 'auto'});
+                 $('#slider-label-2').css({'background': '#ffd54f'});
              }
-             else if (401< value && value < 600) {
+             else if (value < 600) {
                  $("#cause").html(array[2].cause);
                  $("#cause-description").html(array[2].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1435186376919-88c211714029?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050").css({'width' : '300px' , 'height' : 'auto'});
+                 $("#cause-image").attr("src", array[2].image).css({'width' : '300px' , 'height' : 'auto'});
+                 $('#slider-label-3').css({'background': '#ffc107 '});
              }
-             else if (601 < value && value < 800) {
+             else if (value < 800) {
                  $("#cause").html(array[3].cause);
                  $("#cause-description").html(array[3].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a877bb72752a01bdc4a0f76f29db3239").css({'width' : '300px' , 'height' : 'auto'});;
+                 $("#cause-image").attr("src", array[3].image).css({'width' : '300px' , 'height' : 'auto'});;
+                 $('#slider-label-4').css({'background': '#ffa000 '});
              }
-             else if (801 < value && value < 1000) {
+             else if (value < 1000) {
                  $("#cause").html(array[4].cause);
                  $("#cause-description").html(array[4].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1452541735531-b68f5e769257?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=ba419de0a36ed119ff28c47bce4d276e").css({'width' : '300px' , 'height' : 'auto'});
+                 $("#cause-image").attr("src", array[4].image).css({'width' : '300px' , 'height' : 'auto'});
+                 $('#slider-label-5').css({'background': '#ff8f00'});
              }
              else {
                  $("#cause").html(array[5].cause);
                  $("#cause-description").html(array[5].causeDescription);
-                 $("#cause-image").attr("src", "https://images.unsplash.com/photo-1457542553555-6331c3c0855f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4cfbf6c77cb568aa061e5a05110ffcb9").css({'width' : '300px' , 'height' : 'auto'});
+                 $("#cause-image").attr("src", array[5].image).css({'width' : '300px' , 'height' : 'auto'});
+                 $('#slider-label-6').css({'background': '#ff6f00'});
              }
          }
      });
