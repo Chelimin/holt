@@ -1,10 +1,18 @@
 <div>
   <h1>Messages and Donations!</h1>
   <hr/>
-  <p class="lead">
-    <div ng-repeat="msg in messages">
-      <h2 class="example-chat-username">{{ msg.from }}</h2>
-      <p>{{ msg.body }}</p>
+  <div class="row" ng-repeat="msg in messages">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{{ msg.from }}</span>
+          <p>{{ msg.body }}</p>
+        </div>
+        <div class="card-action">
+          <a href>Approve</a>
+          <a href ng-click="deleteMessage(msg)">Delete</a>
+        </div>
+      </div>
     </div>
-  </p>
+  </div>
 </div>
