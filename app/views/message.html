@@ -1,17 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link type="text/css" rel="stylesheet" href="/styles/message.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+</head>
+
+<body>
+
+
 <div>
-  <h1>Write Message!</h1>
+  <h1>Thank you!</h1>
   <p class="lead">
-    Catherine put your card here.
+    <h5> Choose a postcard for our residents: </h5>
+
+    <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg">
+            <h3 class="light grey-text">{{msg}}</h3>
+            <h5 class="light grey-text">{{name}}</h5>
+    </a>
+    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-7.jpg"></a>
+  </div>
+
     <form>
       <div class="form-group">
-        <label for="from">From</label>
-        <input type="text" class="form-control" id="from" placeholder="From" ng-model="name">
+        <label for="message"></label>
+        <input type="text" class="form-control" ng-model="msg" placeholder="Message">
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <input type="text" class="form-control" id="message" placeholder="Message" ng-model="msg">
+        <label for="from"></label>
+        <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
       </div>
-      <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Write!</span></a></p>
+      <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p>
     </form>
   </p>
+
+
+  <h5> How others have shown their love: </h5>
+
+    <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is the message</h3>
+              <h5 class="light grey-text text-lighten-3">Message Author</h5>
+            </div>
+          </li>
+          <li>
+            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+            <div class="caption left-align">
+              <h3>This is the message</h3>
+              <h5 class="light grey-text text-lighten-3">Message Author</h5>
+            </div>
+          </li>
+          <li>
+            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>This is the message</h3>
+              <h5 class="light grey-text text-lighten-3">Message Author</h5>
+            </div>
+          </li>
+          <li>
+            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is the message</h3>
+              <h5 class="light grey-text text-lighten-3">Message Author</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+  <p> Facebook feed & sharing buttons here</p>
+
+  </div>
+
+  <!--Materializecss Carousel-->
+          <script>
+          $(document).ready(function(){
+            $('.carousel').carousel();
+          });
+          </script>
+
+  <!--Materializecss Slider-->
+          <script>
+              $(document).ready(function () {
+                  $('.slider').slider({full_width: true});
+              });
+          </script>
+
+
 </div>
+</body>
+</html>
