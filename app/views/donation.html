@@ -261,8 +261,8 @@
 
     $("#textInput").on("input", function() {
       $("#sliderInput").val(this.value);
-      $("#icon_donation1").val(this.value);
-      $("#icon_donation2").val(this.value);
+      $("#icon_donation1").val("$" + this.value);
+      $("#icon_donation2").val("$" + this.value);
       updateDisplay(this.value);
     });
 
