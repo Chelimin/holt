@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link type="text/css" rel="stylesheet" href="/styles/message.css">
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link type="text/css" rel="stylesheet" href="/styles/materialize_holt.css">
 </head>
 
 <body>
 
 
 <div>
-  <h1>Thank you!</h1>
+  <h1 class="center-align">Thank you!</h1>
   <p class="lead">
-    <h5> Choose a postcard for our residents: </h5>
+    <h5>Send a postcard to our residents: </h5>
 
     <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg">
-            <h3 class="light grey-text">{{msg}}</h3>
-            <h5 class="light grey-text">{{name}}</h5>
-    </a>
+      <div class="postcard">
+      <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg" alt=""/></a>
+      <h3 class="postcardtext center-align">{{msg}}</h3>
+      <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
     <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
     <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
     <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
@@ -37,11 +34,12 @@
         <label for="from"></label>
         <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
       </div>
-      <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p>
+      <!-- <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p> -->
+      <p class="right-align"><a class="waves-effect waves-light btn" ng-click="addMessage()"><i class="material-icons left">email</i>Send</a></p>
     </form>
   </p>
 
-
+  <h3> Facebook feed & sharing buttons here</h3>
   <h5> How others have shown their love: </h5>
 
     <div class="slider">
@@ -49,8 +47,8 @@
           <li>
             <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
             <div class="caption center-align">
-              <h3>This is the message</h3>
-              <h5 class="light grey-text text-lighten-3">Message Author</h5>
+              <h3>{{ msg.body }}</h3>
+              <h5 class="light grey-text text-lighten-3">{{ msg.from }}</h5>
             </div>
           </li>
           <li>
@@ -76,8 +74,6 @@
           </li>
         </ul>
       </div>
-
-  <p> Facebook feed & sharing buttons here</p>
 
   </div>
 
