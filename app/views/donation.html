@@ -56,8 +56,8 @@
     <div class="row">
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s3"><a href="#nonrelief" class="active">Non Tax Relief</a></li>
-          <li class="tab col s3"><a href="#relief">Tax Relief</a></li>
+          <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
+          <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
         </ul>
       </div>
     </div>
@@ -80,7 +80,7 @@
             <div class="input-field col s6">
               <i class="material-icons prefix">payment</i>
               <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card Number</label>
+              <label for="icon_creditcard">Credit Card No.</label>
             </div>
             <div class="input-field col s6">
               <i class="material-icons prefix">payment</i>
@@ -144,7 +144,7 @@
             <div class="input-field col s6">
               <i class="material-icons prefix">payment</i>
               <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card Number</label>
+              <label for="icon_creditcard">Credit Card No.</label>
             </div>
             <div class="input-field col s6">
               <i class="material-icons prefix">payment</i>
@@ -180,7 +180,6 @@
 
       //SCRIPT FOR FORM
       $('ul.tabs').tabs();
-      $('a').css('textDecoration','none');
 
       //SCRIPT FOR SLIDER
          var array = [
