@@ -88,6 +88,9 @@ body {
 }
 
 //CSS FOR DONATION.html
+i {
+    text-align: center;
+}
 /*SLIDER SECTION*/
 #slider-form {
   padding: 20px;
@@ -96,26 +99,22 @@ body {
   border: 2px solid black;
   padding: 10px;
 }
-#textInput {
-    text-align: center;
-    font-size: 50px;
-    margin-top: 20px;
-    width: 150px;
-    margin-right: 25px;
-}
 
 /*DONATION DESCRIPTION SECTION*/
-#description {
+#cause-div {
   border: 5px solid grey;
   padding: 20px;
 }
 
 /*FINAL AMOUNT DIV*/
-#final-amt-div{
-    width: 300px;
-    border: 2px solid black;
-    margin: 0 auto;
-    display: block;
+#text-input {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    display: inline;
+}
+.btn{
+    margin: 10px;
 }
 
 /*NON-TAX RELIEF AND TAX-RELIEF SECTION TABS*/
@@ -125,16 +124,6 @@ body {
 #icon_donation1, #icon_donation2 {
   font-size: 18px;
 }
-
-.ui-widget-content { border: 1px solid #ccc; background: #ff9900 url(images/ui-bg_flat_100_ff9900_40x100.png) 50% 50% repeat-x; color: #222222; }
-.ui-widget-header { border: 1px solid #aaaaaa; background: #797979 url(images/ui-bg_highlight-soft_75_797979_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
-
-.ui-slider { position: relative; text-align: left; }
-.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
-.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
-
-.ui-slider-horizontal { height: .8em; }
-.ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
-.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%;  }
-.ui-slider-horizontal .ui-slider-range-min { left: 0;  }
-.ui-slider-horizontal .ui-slider-range-max { right: 0;}
+//  h6{
+//     border: 1px solid black;
+// }

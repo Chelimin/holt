@@ -1,57 +1,70 @@
 <!--GABRIELLE'S SLIDER-->
 <form id="slider-form">
-  <!--My $ will-->
-  <div class="row valign-wrapper">
-    <h1 class="col s3">MY</h1>
-    <div id="top-amount" class="valign-wrapper center-align">
-      <h3 class="col s1">$</h3>
-      <input id="textInput" class="col s11 valign center-align" type="number" name="amountInput" value="10" />
+   <!--TITLE-->
+    <div>
+        <h1>I WANT TO HELP</h1>
     </div>
-    <h1 class="col s3">WILL...</h1>
-  </div>
 
-  <!--Cause Box-->
-  <div class="row" id="description">
-    <div class="col l6 m6 s12" id="description-text">
-      <h3 id="cause" class="center-align">BASIC</h3>
-      <p id="cause-description" class="center-align">Description 1</p>
+   <!--Cause Box-->
+    <div class="row">
+        <div class="col s3 center-align" style="border: 1px solid black">
+            <h3>DAY TO DAY</h3>
+            <i class="fa fa-5x fa-usd" aria-hidden="true"></i>
+        </div>
+        <div class="col s9" style="border: 1px solid black">
+            <h5>Abused Teen Girls</h5>
+            <p>bla</p>
+            <h5>Unsupported Pregnant Women</h5>
+            <p>bla</p>            
+        </div>
     </div>
-    <div class="col l6 m6 s12 center-align">
-      <img id="cause-image" src="https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050" width="300px" height="auto">
+
+    <!--Slider Labels-->
+   <div id="slider" class="row">
+       <div id="slider-labels">
+          <span id="slider-label-1" class="col s1">1</span>
+          <span id="slider-label-2" class="col s1">clinical</span>
+          <span id="slider-label-3" class="col s2">education</span>
+          <span id="slider-label-4" class="col s2">future</span>
+          <span id="slider-label-5" class="col s2">others</span>
+          <span id="slider-label-6" class="col s3">others</span>
+       </div>
+   </div>
+   <!--Slider-->
+   <div class="row pink lighten-4" style="border: 1px solid black">
+      <h6 class="col s1">50</h6>
+      <h6 class="col s1">100</h6>
+      <h6 class="col s1">300</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">500</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">1000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">2000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">5000</h6>
+      <h6 class="col s1" style="text-align: right">?</h6>
+      <input id="slider-input" class= "row col s12" type="range" name="amountRange" min="10" max="1200" value="10"/>
+   </div>
+
+   <!--Final Amount-->
+    <div id="final-amt-div" class="valign-wrapper row">
+        <div class="col l3 m6 s6 valign right-align">
+            <h5>I will give $</h5>
+        </div>
+        <div id="text-input-div" class="col l3 m6 s6 valign">
+           <input id="text-input" class="valign" type="number" name="amountInput" value="10" style="display: inline"/>
+        </div>
+        <div class="center-align col l6 m12 s12 valign">
+            <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
+            <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
+        </div>
     </div>
-  </div>
-
-  <!--Slider Labels-->
-  <div id="slider" class="row">
-    <div id="slider-labels">
-      <span id="slider-label-1" class="col s2">basic</span>
-      <span id="slider-label-2" class="col s2">clinical</span>
-      <span id="slider-label-3" class="col s2">education</span>
-      <span id="slider-label-4" class="col s2">future</span>
-      <span id="slider-label-5" class="col s2">others</span>
-      <span id="slider-label-6" class="col s2">others</span>
-    </div>
-  </div>
-
-  <!--Slider-->
-  <input id="sliderInput" class="row col s6" type="range" name="amountRange" min="10" max="1200" value="10" step="10" />
-
-  <!--Final Amount-->
-  <div class="valign-wrapper row">
-    <div id="final-amt-div" class="valign center-align">
-      <h3 id="final-amt" class="center-align">Donate $10</h3>
-      <div class="row center-align">
-        <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
-        <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
-      </div>
-    </div>
-  </div>
-
 </form>
 <!--END OF GABRIELLE'S SLIDER-->
 
-<!-- CREDIT CARD FORM! -->
 
+<!-- CREDIT CARD FORM! -->
 <!-- NAV TABS FOR FORMS -->
 <div class="row">
   <div class="col s12">
@@ -224,58 +237,52 @@
       //Range 1
       {
         cause: "BASIC",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+        causeIcon: "lala",
       },
       //Range 2
       {
         cause: "CLINICAL",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1444792131309-2e517032ded6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+        causeIcon: "lala",
       },
       //Range 3
       {
         cause: "EDUCATION",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1435186376919-88c211714029?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+        causeIcon: "lala",
       },
       //Range 4
       {
         cause: "FUTURE",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a877bb72752a01bdc4a0f76f29db3239",
+        causeIcon: "lala",
       },
       //Range 5
       {
         cause: "OMG YOU'RE SO GENEROUS!",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1452541735531-b68f5e769257?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=ba419de0a36ed119ff28c47bce4d276e",
+        causeIcon: "lala",
       },
       //Range 6
       {
         cause: "OTHERS",
-        causeDescription: "lala",
-        image: "https://images.unsplash.com/photo-1457542553555-6331c3c0855f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4cfbf6c77cb568aa061e5a05110ffcb9",
+        causeIcon: "lala",
       }
     ]
 
-    $("#textInput").on("input", function() {
-      $("#sliderInput").val(this.value);
+    $("#text-input").on("input", function() {
+      $("#slider-input").val(this.value);
       $("#icon_donation1").val(this.value);
       $("#icon_donation2").val(this.value);
       updateDisplay(this.value);
     });
 
-    $("#sliderInput").on("input", function() {
-      $("#textInput").val(this.value);
+    $("#slider-input").on("input", function() {
+      $("#text-input").val(this.value);
       $("#icon_donation1").val(this.value);
       $("#icon_donation2").val(this.value);
       updateDisplay(this.value);
     });
 
     $("#icon_donation1").on("input", function() {
-      $("#sliderInput").val(this.value);
-      $("#textInput").val(this.value);
+      $("#slider-input").val(this.value);
+      $("#text-input").val(this.value);
       updateDisplay(this.value);
     })
 
@@ -314,7 +321,7 @@
 
       if (value < 200) {
         $("#cause").html(array[0].cause);
-        $("#cause-description").html(array[0].causeDescription);
+        $("#cause-description").html(array[0].causeIcon);
         $("#cause-image").attr("src", array[0].image).css({
           'width': '300px',
           'height': 'auto'
@@ -325,7 +332,7 @@
         //$("#cause-image").prepend('<img src="array[0].image"/>');
       } else if (value < 400) {
         $("#cause").html(array[1].cause);
-        $("#cause-description").html(array[1].causeDescription);
+        $("#cause-description").html(array[1].causeIcon);
         $("#cause-image").attr("src", array[1].image).css({
           'width': '300px',
           'height': 'auto'
@@ -335,7 +342,7 @@
         });
       } else if (value < 600) {
         $("#cause").html(array[2].cause);
-        $("#cause-description").html(array[2].causeDescription);
+        $("#cause-description").html(array[2].causeIcon);
         $("#cause-image").attr("src", array[2].image).css({
           'width': '300px',
           'height': 'auto'
@@ -345,7 +352,7 @@
         });
       } else if (value < 800) {
         $("#cause").html(array[3].cause);
-        $("#cause-description").html(array[3].causeDescription);
+        $("#cause-description").html(array[3].causeIcon);
         $("#cause-image").attr("src", array[3].image).css({
           'width': '300px',
           'height': 'auto'
@@ -355,7 +362,7 @@
         });
       } else if (value < 1000) {
         $("#cause").html(array[4].cause);
-        $("#cause-description").html(array[4].causeDescription);
+        $("#cause-description").html(array[4].causeIcon);
         $("#cause-image").attr("src", array[4].image).css({
           'width': '300px',
           'height': 'auto'
@@ -365,7 +372,7 @@
         });
       } else {
         $("#cause").html(array[5].cause);
-        $("#cause-description").html(array[5].causeDescription);
+        $("#cause-description").html(array[5].causeIcon);
         $("#cause-image").attr("src", array[5].image).css({
           'width': '300px',
           'height': 'auto'
