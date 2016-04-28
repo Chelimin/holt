@@ -75,7 +75,7 @@
         <div class="input-field col s6">
           <i class="material-icons prefix">stars</i>
           <input id="icon_donation1" type="tel" class="validate">
-          <label for="icon_donation1">$</label>
+          <label for="icon_donation1"></label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">payment</i>
@@ -157,7 +157,7 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">stars</i>
           <input id="icon_donation2" type="tel" class="validate">
-          <label for="icon_donation2">$</label>
+          <label for="icon_donation2"></label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">payment</i>
@@ -273,6 +273,12 @@
       updateDisplay(this.value);
     });
 
+    $("#icon_donation1").on("input", function() {
+      $("#sliderInput").val(this.value);
+      $("#textInput").val(this.value);
+      updateDisplay(this.value);
+    })
+
     $("#recurring-donate").on("click", function() {
       $("#recurring1").attr("checked", true);
       $("#recurring2").attr("checked", true);
@@ -294,7 +300,6 @@
         $('#recurring-duration1').hide();
       }
     });
-
     $("#recurring2").on("change", function() {
       if (this.checked == true) {
         $('#recurring-duration2').show();

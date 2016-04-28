@@ -118,8 +118,12 @@ body {
     display: block;
 }
 
+/*NON-TAX RELIEF AND TAX-RELIEF SECTION TABS*/
 #non, #tax {
   text-decoration: none;
+}
+#icon_donation1, #icon_donation2 {
+  font-size: 18px;
 }
 
 .ui-widget-content { border: 1px solid #ccc; background: #ff9900 url(images/ui-bg_flat_100_ff9900_40x100.png) 50% 50% repeat-x; color: #222222; }
