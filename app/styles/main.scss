@@ -109,9 +109,6 @@ body {
   border: 5px solid grey;
   padding: 20px;
 }
-#cause-image {
-  border-left: 5px solid grey;
-}
 
 /*FINAL AMOUNT DIV*/
 #final-amt-div{
@@ -120,6 +117,11 @@ body {
     margin: 0 auto;
     display: block;
 }
+
+#non, #tax {
+  text-decoration: none;
+}
+
 .ui-widget-content { border: 1px solid #ccc; background: #ff9900 url(images/ui-bg_flat_100_ff9900_40x100.png) 50% 50% repeat-x; color: #222222; }
 .ui-widget-header { border: 1px solid #aaaaaa; background: #797979 url(images/ui-bg_highlight-soft_75_797979_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
 

@@ -1,278 +1,374 @@
 <!--GABRIELLE'S SLIDER-->
-   <form id="slider-form">
-     <!--My $ will-->
-      <div class="row valign-wrapper">
-          <h1 class="col s3">MY</h1>
-          <div id="top-amount" class="valign-wrapper center-align">
-             <h3 class="col s1">$</h3>
-              <input id="textInput" class= "col s11 valign center-align" type="number" name="amountInput" value="10"/>
-          </div>
-          <h1 class="col s3">WILL...</h1>
-      </div>
-
-     <!--Cause Box-->
-      <div class="row" id="description">
-        <div class="col l6 m6 s12" id="description-text">
-            <h3 id="cause" class="center-align">BASIC</h3>
-             <p id="cause-description" class="center-align">Description 1</p>
-        </div>
-        <div class="col l6 m6 s12 center-align">
-          <img id="cause-image" src="https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050" width="300px" height="auto">
-        </div>
-      </div>
-
-      <!--Slider Labels-->
-      <div id="slider" class="row">
-          <div id="slider-labels">
-            <span id="slider-label-1" class="col s2">basic</span>
-            <span id="slider-label-2" class="col s2">clinical</span>
-            <span id="slider-label-3" class="col s2">education</span>
-            <span id="slider-label-4" class="col s2">future</span>
-            <span id="slider-label-5" class="col s2">others</span>
-            <span id="slider-label-6" class="col s2">others</span>
-          </div>
-      </div>
-
-     <!--Slider-->
-      <input id="sliderInput" class= "row col s6" type="range" name="amountRange" min="10" max="1200" value="10" step="10"/>
-
-      <!--Final Amount-->
-      <div class="valign-wrapper row">
-         <div id="final-amt-div" class="valign center-align">
-            <h3 id ="final-amt" class="center-align">Donate $10</h3>
-            <div class="row center-align">
-               <a class="btn orange darken-1">Once</a>
-               <a class="btn orange darken-1">Monthly</a>
-            </div>
-         </div>
-      </div>
-
-   </form>
-<!--END OF GABRIELLE'S SLIDER-->
-
-<!-- CREDIT CARD FORM! -->
-
-  <!-- NAV TABS FOR FORMS -->
-    <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a href="#nonrelief" class="active">Non Tax Relief</a></li>
-          <li class="tab col s3"><a href="#relief">Tax Relief</a></li>
-        </ul>
-      </div>
+<form id="slider-form">
+  <!--My $ will-->
+  <div class="row valign-wrapper">
+    <h1 class="col s3">MY</h1>
+    <div id="top-amount" class="valign-wrapper center-align">
+      <h3 class="col s1">$</h3>
+      <input id="textInput" class="col s11 valign center-align" type="number" name="amountInput" value="10" />
     </div>
+    <h1 class="col s3">WILL...</h1>
+  </div>
 
-    <!-- DONATION FORM: NON-TAX-RELIEF -->
-    <div id="nonrelief">
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">stars</i>
-              <input id="icon_donation" type="tel" class="validate">
-              <label for="icon_donation">Donation Amount</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card Number</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_expire" type="tel" class="validate">
-              <label for="icon_expire">Expiration Date</label>
-            </div>
-            <div class="input-field col s12">
-              <input type="checkbox" id="recurring1" />
-              <label for="recurring1">Make this a monthly contribution</label>
-            </div>
-            <div class="input-field col s12">
-              <input type="checkbox" id="newsletter1" checked="checked" />
-              <label for="newsletter1">Subscribe to our Newsletter</label>
-            </div>
-          </div>
-        </form>
-      </div>
+  <!--Cause Box-->
+  <div class="row" id="description">
+    <div class="col l6 m6 s12" id="description-text">
+      <h3 id="cause" class="center-align">BASIC</h3>
+      <p id="cause-description" class="center-align">Description 1</p>
     </div>
-
-    <!-- DONATION FORM: TAX-RELIEF -->
-    <div id="relief">
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">picture_in_picture</i>
-              <input id="icon_nric" type="text" class="validate">
-              <label for="icon_nric">NRIC</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">work</i>
-              <input id="icon_company" type="text" class="validate">
-              <label for="icon_company">Company Reg. No.</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Contact No.</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">location_on</i>
-              <input id="icon_address" type="tel" class="validate">
-              <label for="icon_address">Address</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input id="icon_email" type="tel" class="validate">
-              <label for="icon_email">Email</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">stars</i>
-              <input id="icon_donation" type="tel" class="validate">
-              <label for="icon_donation">Donation Amount</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card Number</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_expire" type="tel" class="validate">
-              <label for="icon_expire">Expiration Date</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input type="checkbox" id="recurring2" />
-              <label for="recurring2">Make this a monthly contribution</label>
-            </div>
-            <div class="input-field col s12">
-              <input type="checkbox" id="newsletter2" checked="checked" />
-              <label for="newsletter2">Subscribe to our Newsletter</label>
-            </div>
-
-          </div>
-        </form>
-      </div>
+    <div class="col l6 m6 s12 center-align">
+      <img id="cause-image" src="https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050" width="300px" height="auto">
     </div>
+  </div>
 
-    <div class="row">
-      <div class="row">
-        <button class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s12" type="submit" name="action">
-          SUBMIT
-        </button>
+  <!--Slider Labels-->
+  <div id="slider" class="row">
+    <div id="slider-labels">
+      <span id="slider-label-1" class="col s2">basic</span>
+      <span id="slider-label-2" class="col s2">clinical</span>
+      <span id="slider-label-3" class="col s2">education</span>
+      <span id="slider-label-4" class="col s2">future</span>
+      <span id="slider-label-5" class="col s2">others</span>
+      <span id="slider-label-6" class="col s2">others</span>
+    </div>
+  </div>
+
+  <!--Slider-->
+  <input id="sliderInput" class="row col s6" type="range" name="amountRange" min="10" max="1200" value="10" step="10" />
+
+  <!--Final Amount-->
+  <div class="valign-wrapper row">
+    <div id="final-amt-div" class="valign center-align">
+      <h3 id="final-amt" class="center-align">Donate $10</h3>
+      <div class="row center-align">
+        <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
+        <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
       </div>
     </div>
   </div>
 
-  <script>
-     $( function pageLoaded(){
+</form>
+<!--END OF GABRIELLE'S SLIDER-->
 
-      //SCRIPT FOR FORM
-      $('ul.tabs').tabs();
-      $('a').css('textDecoration','none');
+<!-- CREDIT CARD FORM! -->
 
-      //SCRIPT FOR SLIDER
-         var array = [
-             //Range 1
-             {
-                 cause: "BASIC",
-                 causeDescription: "lala",
-                 image: "https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
-             },
-             //Range 2
-             {
-                 cause: "CLINICAL",
-                 causeDescription: "lala",
-                 image: "https://images.unsplash.com/photo-1444792131309-2e517032ded6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
-             },
-             //Range 3
-             {
-                 cause: "EDUCATION",
-                 causeDescription: "lala",
-                 image: "https://images.unsplash.com/photo-1435186376919-88c211714029?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
-             },
-             //Range 4
-             {
-                 cause: "FUTURE",
-                 causeDescription: "lala",
-                 image: "https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a877bb72752a01bdc4a0f76f29db3239",
-             },
-             //Range 5
-             {
-                 cause: "OMG YOU'RE SO GENEROUS!",
-                 causeDescription: "lala",
-                 image:"https://images.unsplash.com/photo-1452541735531-b68f5e769257?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=ba419de0a36ed119ff28c47bce4d276e",
-             },
-             //Range 6
-             {
-                 cause: "OTHERS",
-                 causeDescription: "lala",
-                 image:"https://images.unsplash.com/photo-1457542553555-6331c3c0855f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4cfbf6c77cb568aa061e5a05110ffcb9",
-             }
-         ]
+<!-- NAV TABS FOR FORMS -->
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
+      <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
+    </ul>
+  </div>
+</div>
 
-         $("#textInput").on("input", function (){
-              $("#sliderInput").val(this.value);
-             updateDisplay(this.value);
-         });
+<!-- DONATION FORM: NON-TAX-RELIEF -->
+<div id="nonrelief">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">stars</i>
+          <input id="icon_donation1" type="tel" class="validate">
+          <label for="icon_donation1">$</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">payment</i>
+          <input id="icon_creditcard" type="tel" class="validate">
+          <label for="icon_creditcard">Credit Card No.</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">payment</i>
+          <input id="icon_expire" type="tel" class="validate">
+          <label for="icon_expire">Expiration Date</label>
+        </div>
 
-         $("#sliderInput").on("input", function (){
-              $("#textInput").val(this.value);
-             updateDisplay(this.value);
-         });
+        <div class="input-field col s6">
+          <input type="checkbox" id="recurring1" />
+          <label for="recurring1">Make this a monthly contribution</label>
+          <div id="recurring-duration1" class="input-field col s6">
+            <form action="#">
+              <p>
+                <input name="group1" type="radio" id="duration-12" />
+                <label for="duration-12">for 12 months</label>
+              </p>
+              <p>
+                <input name="group1" type="radio" id="duration-24" />
+                <label for="duration-24">for 24 months</label>
+              </p>
+              <p>
+                <input name="group1" type="radio" id="duration-36" />
+                <label for="duration-36">for 36 months</label>
+              </p>
+            </form>
+          </div>
+        </div>
 
-         function updateDisplay(value) {
-             console.log(value);
-             $("#final-amt").html("Donate $" + value);
+        <div class="input-field col s6">
+          <input type="checkbox" id="newsletter1" checked="checked" />
+          <label for="newsletter1">Subscribe to our Newsletter</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
-             if (value < 200) {
-                 $("#cause").html(array[0].cause);
-                 $("#cause-description").html(array[0].causeDescription);
-                 $("#cause-image").attr("src", array[0].image).css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-1').css({'background': '#ffecb3'});
-                 //$("#cause-image").prepend('<img src="array[0].image"/>');
-             }
-             else if (value < 400) {
-                 $("#cause").html(array[1].cause);
-                 $("#cause-description").html(array[1].causeDescription);
-                 $("#cause-image").attr("src", array[1].image).css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-2').css({'background': '#ffd54f'});
-             }
-             else if (value < 600) {
-                 $("#cause").html(array[2].cause);
-                 $("#cause-description").html(array[2].causeDescription);
-                 $("#cause-image").attr("src", array[2].image).css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-3').css({'background': '#ffc107 '});
-             }
-             else if (value < 800) {
-                 $("#cause").html(array[3].cause);
-                 $("#cause-description").html(array[3].causeDescription);
-                 $("#cause-image").attr("src", array[3].image).css({'width' : '300px' , 'height' : 'auto'});;
-                 $('#slider-label-4').css({'background': '#ffa000 '});
-             }
-             else if (value < 1000) {
-                 $("#cause").html(array[4].cause);
-                 $("#cause-description").html(array[4].causeDescription);
-                 $("#cause-image").attr("src", array[4].image).css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-5').css({'background': '#ff8f00'});
-             }
-             else {
-                 $("#cause").html(array[5].cause);
-                 $("#cause-description").html(array[5].causeDescription);
-                 $("#cause-image").attr("src", array[5].image).css({'width' : '300px' , 'height' : 'auto'});
-                 $('#slider-label-6').css({'background': '#ff6f00'});
-             }
-         }
-     });
-     </script>
+<!-- DONATION FORM: TAX-RELIEF -->
+<div id="relief">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">picture_in_picture</i>
+          <input id="icon_nric" type="text" class="validate">
+          <label for="icon_nric">NRIC</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">work</i>
+          <input id="icon_company" type="text" class="validate">
+          <label for="icon_company">Company Reg. No.</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Contact No.</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">location_on</i>
+          <input id="icon_address" type="tel" class="validate">
+          <label for="icon_address">Address</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_email" type="tel" class="validate">
+          <label for="icon_email">Email</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">stars</i>
+          <input id="icon_donation2" type="tel" class="validate">
+          <label for="icon_donation2">$</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">payment</i>
+          <input id="icon_creditcard" type="tel" class="validate">
+          <label for="icon_creditcard">Credit Card No.</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">payment</i>
+          <input id="icon_expire" type="tel" class="validate">
+          <label for="icon_expire">Expiration Date</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input type="checkbox" id="recurring2" />
+          <label for="recurring2">Make this a monthly contribution</label>
+          <div id="recurring-duration2" class="input-field col s6">
+            <form action="#">
+              <p>
+                <input name="group1" type="radio" id="duration-12" />
+                <label for="duration-12">for 12 months</label>
+              </p>
+              <p>
+                <input name="group1" type="radio" id="duration-24" />
+                <label for="duration-24">for 24 months</label>
+              </p>
+              <p>
+                <input name="group1" type="radio" id="duration-36" />
+                <label for="duration-36">for 36 months</label>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="input-field col s6">
+          <input type="checkbox" id="newsletter2" checked="checked" />
+          <label for="newsletter2">Subscribe to our Newsletter</label>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row">
+    <button class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s12" type="submit" name="action">
+      SUBMIT
+    </button>
+  </div>
+</div>
+</div>
+
+<script>
+  $(function pageLoaded() {
+
+    //SCRIPTS FOR FORM
+    $('ul.tabs').tabs();
+    $('select').material_select();
+    $('#recurring-duration1').hide();
+    $('#recurring-duration2').hide();
+
+    //SCRIPT FOR SLIDER
+    var array = [
+      //Range 1
+      {
+        cause: "BASIC",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1452274381522-521513015433?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+      },
+      //Range 2
+      {
+        cause: "CLINICAL",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1444792131309-2e517032ded6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+      },
+      //Range 3
+      {
+        cause: "EDUCATION",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1435186376919-88c211714029?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1050",
+      },
+      //Range 4
+      {
+        cause: "FUTURE",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a877bb72752a01bdc4a0f76f29db3239",
+      },
+      //Range 5
+      {
+        cause: "OMG YOU'RE SO GENEROUS!",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1452541735531-b68f5e769257?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=ba419de0a36ed119ff28c47bce4d276e",
+      },
+      //Range 6
+      {
+        cause: "OTHERS",
+        causeDescription: "lala",
+        image: "https://images.unsplash.com/photo-1457542553555-6331c3c0855f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4cfbf6c77cb568aa061e5a05110ffcb9",
+      }
+    ]
+
+    $("#textInput").on("input", function() {
+      $("#sliderInput").val(this.value);
+      $("#icon_donation1").val(this.value);
+      $("#icon_donation2").val(this.value);
+      updateDisplay(this.value);
+    });
+
+    $("#sliderInput").on("input", function() {
+      $("#textInput").val(this.value);
+      $("#icon_donation1").val(this.value);
+      $("#icon_donation2").val(this.value);
+      updateDisplay(this.value);
+    });
+
+    $("#recurring-donate").on("click", function() {
+      $("#recurring1").attr("checked", true);
+      $("#recurring2").attr("checked", true);
+      $('#recurring-duration1').show();
+      $('#recurring-duration2').show();
+    });
+
+    $("#non-recurring-donate").on("click", function() {
+      $("#recurring1").attr("checked", false);
+      $("#recurring2").attr("checked", false);
+      $('#recurring-duration1').hide();
+      $('#recurring-duration2').hide();
+    });
+
+    $("#recurring1").on("change", function() {
+      if (this.checked == true) {
+        $('#recurring-duration1').show();
+      } else {
+        $('#recurring-duration1').hide();
+      }
+    });
+
+    $("#recurring2").on("change", function() {
+      if (this.checked == true) {
+        $('#recurring-duration2').show();
+      } else {
+        $('#recurring-duration2').hide();
+      }
+    });
+
+    function updateDisplay(value) {
+      console.log(value);
+      $("#final-amt").html("Donate $" + value);
+
+      if (value < 200) {
+        $("#cause").html(array[0].cause);
+        $("#cause-description").html(array[0].causeDescription);
+        $("#cause-image").attr("src", array[0].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });
+        $('#slider-label-1').css({
+          'background': '#ffecb3'
+        });
+        //$("#cause-image").prepend('<img src="array[0].image"/>');
+      } else if (value < 400) {
+        $("#cause").html(array[1].cause);
+        $("#cause-description").html(array[1].causeDescription);
+        $("#cause-image").attr("src", array[1].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });
+        $('#slider-label-2').css({
+          'background': '#ffd54f'
+        });
+      } else if (value < 600) {
+        $("#cause").html(array[2].cause);
+        $("#cause-description").html(array[2].causeDescription);
+        $("#cause-image").attr("src", array[2].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });
+        $('#slider-label-3').css({
+          'background': '#ffc107 '
+        });
+      } else if (value < 800) {
+        $("#cause").html(array[3].cause);
+        $("#cause-description").html(array[3].causeDescription);
+        $("#cause-image").attr("src", array[3].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });;
+        $('#slider-label-4').css({
+          'background': '#ffa000 '
+        });
+      } else if (value < 1000) {
+        $("#cause").html(array[4].cause);
+        $("#cause-description").html(array[4].causeDescription);
+        $("#cause-image").attr("src", array[4].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });
+        $('#slider-label-5').css({
+          'background': '#ff8f00'
+        });
+      } else {
+        $("#cause").html(array[5].cause);
+        $("#cause-description").html(array[5].causeDescription);
+        $("#cause-image").attr("src", array[5].image).css({
+          'width': '300px',
+          'height': 'auto'
+        });
+        $('#slider-label-6').css({
+          'background': '#ff6f00'
+        });
+      }
+    }
+  });
+</script>
