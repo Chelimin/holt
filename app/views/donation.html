@@ -9,7 +9,7 @@
 
     <!--Cause Box-->
     <div class="row valign-wrapper" id="cause-box" style="border: 1px solid red accent-1">
-      <div id="cause-color" class="col s6 center-align valign">
+      <div id="cause-color" class="col s6 center-align valign" style="background-image: url('/images/day-to-day.png')">
         <h3 id="cause-name">Day-to-Day</h3>
         <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
       </div>
@@ -210,9 +210,11 @@
 
   <div class="row">
     <div class="row center-align">
-      <button id="submit-button" class="btn waves-effect waves-light #fb8c00 orange" type="submit" name="action">
-        SUBMIT
-      </button>
+      <a href="#/message"
+        id="submit-button"
+        class="btn waves-effect waves-light #fb8c00 orange" type="submit" name="action">
+        Submit
+      </a>
     </div>
   </div>
 </div>
@@ -229,7 +231,7 @@
     var array = [
       //Range 1
       {
-        color: '#ffecb3',
+        image: 'day-to-day.png',
         name: "Day-to-day",
         icon: "fa fa-5x fa-usd",
         teenProblem: "Provide a week's worth of pocket money for school",
@@ -237,7 +239,7 @@
       },
       //Range 2
       {
-        color: '#ffd54f ',
+        image: "basic.png",
         name: "Basic",
         icon: "fa fa-5x fa-female",
         teenProblem: "Provide her in-house education for a week",
@@ -245,7 +247,7 @@
       },
       //Range 3
       {
-        color: '#ffc107 ',
+        image: "education.png",
         name: "Education",
         icon: "fa fa-5x fa-graduation-cap",
         teenProblem: "Provide her in-house education for 1 month",
@@ -253,7 +255,7 @@
       },
       //Range 4
       {
-        color: '#ffa000 ',
+        image: "therapy.png",
         name: "Therapy",
         icon: "fa fa-5x fa-heart",
         teenProblem: "Support her counselling & clinical therapy for 1 month",
@@ -261,7 +263,7 @@
       },
       //Range 5
       {
-        color: '#ff8f00 ',
+        image: "residential.png",
         name: "Residential",
         icon: "fa fa-5x fa-home",
         teenProblem: "Provide full residential services for 2 months",
@@ -269,7 +271,7 @@
       },
       //Range 6
       {
-        color: '#ff6f00 ',
+        image: "full-support.png",
         name: "Full Support",
         icon: "fa fa-5x fa-users",
         teenProblem: "Support her education & clinical programmes for 2 months",
@@ -277,7 +279,7 @@
       },
       //Range 7
       {
-        color: '#ee035b',
+        image: "invaluable-gift.png",
         name: "Invaluable Gift",
         icon: "fa fa-5x fa-gift",
         teenProblem: "",
@@ -341,6 +343,7 @@
     });
 
     function updateDisplay(value) {
+      localStorage.value = value;
       if (value < 100) {
         $("#pregnant-title").show();
         $('#teen-title').show();
@@ -348,7 +351,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[0].icon);
         $("#cause-color").css({
-          'background-color': array[0].color
+          'background-image': 'url(/images/' + array[0].image + ')'
         });
         $('#teen-problem').html(array[0].teenProblem);
         $('#pregnant-problem').html(array[0].pregnantProblem);
@@ -359,7 +362,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[1].icon);
         $("#cause-color").css({
-          'background-color': array[1].color
+          'background-image': 'url(/images/' + array[1].image + ')'
         });
         $('#teen-problem').html(array[1].teenProblem);
         $('#pregnant-problem').html(array[1].pregnantProblem);
@@ -370,7 +373,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[2].icon);
         $("#cause-color").css({
-          'background-color': array[2].color
+          'background-image': 'url(/images/' + array[2].image + ')'
         });
         $('#teen-problem').html(array[2].teenProblem);
         $('#pregnant-problem').html(array[2].pregnantProblem);
@@ -381,7 +384,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[3].icon);
         $("#cause-color").css({
-          'background-color': array[3].color
+          'background-image': 'url(/images/' + array[3].image + ')'
         });
         $('#teen-problem').html(array[3].teenProblem);
         $('#pregnant-problem').html(array[3].pregnantProblem);
@@ -392,7 +395,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[4].icon);
         $("#cause-color").css({
-          'background-color': array[4].color
+          'background-image': 'url(/images/' + array[4].image + ')'
         });
         $('#teen-problem').html(array[4].teenProblem);
         $('#pregnant-problem').html(array[4].pregnantProblem);
@@ -403,7 +406,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[5].icon);
         $("#cause-color").css({
-          'background-color': array[5].color
+          'background-image': 'url(/images/' + array[5].image + ')'
         });
         $('#teen-problem').html(array[5].teenProblem);
         $('#pregnant-problem').html(array[5].pregnantProblem);
@@ -414,7 +417,7 @@
         $("#cause-icon").removeClass();
         $("#cause-icon").addClass(array[6].icon);
         $("#cause-color").css({
-          'background-color': array[6].color
+          'background-image': 'url(/images/' + array[6].image + ')'
         });
         $("#pregnant-title").hide();
         $('#teen-title').hide();

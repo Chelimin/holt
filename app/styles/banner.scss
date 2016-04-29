@@ -56,3 +56,20 @@ body {
 #cause-box {
   background-color: #e8e8e8;
 }
+
+#cause-color {
+  background-size: cover;
+  background-position: center center;
+
+  #cause-name {
+    color: #fff;
+  }
+
+  #cause-icon {
+    color: #fff;
+  }
+}
+
+#submit-button {
+  max-width: 256px;
+}
