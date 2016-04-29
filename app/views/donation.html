@@ -1,461 +1,429 @@
-<div>
-  <div class="ds-banner">
-    <div class="container row">
-      <img class="ds-logo col s12 m6 l6" src="images/logo.png">
+<div class="card ds-card">
+  <!--GABRIELLE'S SLIDER-->
+  <form id="slider-form">
+    <!--TITLE-->
+    <div>
+      <h4 class="ds-card-title">Gift a Message of Hope</h4>
+      <hr/>
     </div>
-  </div>
 
-  <div class="header ds-nav">
-    <nav>
-      <div class="nav-wrapper orange darken-3">
-        <div class="container">
-          <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="left hide-on-med-and-down valign-wrapper">
-            <li class="active"><a href="#/">Donate</a></li>
-            <li><a href="#/message">Message</a></li>
-            <li><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-          <div id="status" class="right"></div>
-          <ul class="side-nav" id="mobile-demo">
-            <li class="active"><a href="#/">Donate</a></li>
-            <li><a href="#/message">Message</a></li>
-            <li><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-        </div>
+    <!--Cause Box-->
+    <div class="row valign-wrapper" id="cause-box" style="border: 1px solid red accent-1">
+      <div id="cause-color" class="col s6 center-align valign">
+        <h3 id="cause-name">Day-to-Day</h3>
+        <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
       </div>
-    </nav>
-  </div>
-
-  <!--Facebook Login Button social plugin-->
-  <div class="FB-login right">
-      <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" show_faces=true auto_logout_link="true">
-      </fb:login-button>
-  </div>
-
-  <div class="container">
-    <!--GABRIELLE'S SLIDER-->
-    <form id="slider-form">
-      <!--TITLE-->
-      <div>
-        <h1>Message of Hope</h1>
+      <div id="cause-div" class="col s6 valign">
+        <h6 id="teen-title" class="left-align">Abused Teen Girls</h6>
+        <h5 id="teen-problem" class="left-align">Provide a week's worth of pocket money for school</h5>
+        <br>
+        <h6 id="pregnant-title" class="left-align">Unsupported Pregnant Women</h6>
+        <strong><h5 id="pregnant-problem" class="left-align">Provide a week's worth of daily meals</h5></strong>
       </div>
+    </div>
 
-      <!--Cause Box-->
-      <div class="row valign-wrapper" style="border: 1px solid red accent-1">
-        <div id="cause-color" class="col s6 center-align valign">
-          <h3 id="cause-name">DAY TO DAY</h3>
-          <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
-        </div>
-        <div id="cause-div" class="col s6 valign">
-          <h6 id="teen-title" class="left-align">Abused Teen Girls</h6>
-          <h5 id="teen-problem" class="left-align">Provide a week's worth of pocket money for school</h5>
-          <br>
-          <h6 id="pregnant-title" class="left-align">Unsupported Pregnant Women</h6>
-          <strong><h5 id="pregnant-problem" class="left-align">Provide a week's worth of daily meals</h5></strong>
-        </div>
-      </div>
-
-      <!--Slider-->
-      <div class="row">
-        <h6 class="col s1">10</h6>
-        <h6 class="col s1"></h6>
-        <h6 class="col s1">1000</h6>
-        <h6 class="col s1"></h6>
-        <h6 class="col s1">2000</h6>
-        <h6 class="col s1"></h6>
-        <h6 class="col s1">3000</h6>
-        <h6 class="col s1"></h6>
-        <h6 class="col s1">4000</h6>
-        <h6 class="col s1"></h6>
-        <h6 class="col s1">5000</h6>
-        <h6 class="col s1" style="text-align: right">?</h6>
-        <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10" />
-      </div>
-
-      <!--Final Amount-->
-      <div id="final-amt-div" class="valign-wrapper row">
-        <div class="col s12 valign right-align">
-          <h5>I will give $</h5>
-        </div>
-        <div id="text-input-div" class="col s12">
-          <input id="text-input" class="valign" type="number" name="amountInput" value="10" style="display: inline" />
-        </div>
-        <div class="center-align col s12">
-          <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
-          <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
-        </div>
-      </div>
-    </form>
-    <!--END OF GABRIELLE'S SLIDER-->
-
-
-    <!-- CREDIT CARD FORM! -->
-    <!-- NAV TABS FOR FORMS -->
+    <!--Slider-->
     <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
-          <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
-        </ul>
-      </div>
+      <h6 class="col s1">10</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">1000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">2000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">3000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">4000</h6>
+      <h6 class="col s1"></h6>
+      <h6 class="col s1">5000</h6>
+      <h6 class="col s1" style="text-align: right">?</h6>
+      <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10" />
     </div>
 
-    <!-- DONATION FORM: NON-TAX-RELIEF -->
-    <div id="nonrelief">
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12 m6" id="name">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate" ng-model="name">
-              <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
-              <input id="icon_donation1" type="tel" class="validate">
-              <label for="icon_donation1"></label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card No.</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="fa fa-calendar material-icons prefix"></i>
-              <input id="icon_expire" type="tel" class="validate">
-              <label for="icon_expire">Expiration Date</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <input type="checkbox" id="recurring1" />
-              <label for="recurring1">Make this a monthly contribution</label>
-              <div id="recurring-duration1" class="input-field col s6">
-                <form action="#">
-                  <p>
-                    <input name="group1" type="radio" id="duration-12" />
-                    <label for="duration-12">for 12 months</label>
-                  </p>
-                  <p>
-                    <input name="group1" type="radio" id="duration-24" />
-                    <label for="duration-24">for 24 months</label>
-                  </p>
-                  <p>
-                    <input name="group1" type="radio" id="duration-36" />
-                    <label for="duration-36">for 36 months</label>
-                  </p>
-                </form>
-              </div>
-            </div>
+    <!--Final Amount-->
+    <div id="final-amt-div" class="valign-wrapper row">
+      <div class="col s12 valign right-align">
+        <h5>I will give $</h5>
+      </div>
+      <div id="text-input-div" class="col s12">
+        <input id="text-input" class="valign" type="number" name="amountInput" value="10" style="display: inline" />
+      </div>
+      <div class="center-align col s12">
+        <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
+        <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
+      </div>
+    </div>
+  </form>
+  <!--END OF GABRIELLE'S SLIDER-->
 
-            <div class="input-field col s6">
-              <input type="checkbox" id="newsletter1" checked="checked" />
-              <label for="newsletter1">Subscribe to our Newsletter</label>
+  <div>
+    <h4 class="ds-card-title">Credit Details</h4>
+    <hr/>
+  </div>
+  <!-- CREDIT CARD FORM! -->
+  <!-- NAV TABS FOR FORMS -->
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
+        <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DONATION FORM: NON-TAX-RELIEF -->
+  <div id="nonrelief">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m6" id="name">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" ng-model="name">
+            <label for="icon_prefix">Name</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
+            <input id="icon_donation1" type="tel" class="validate">
+            <label for="icon_donation1"></label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">payment</i>
+            <input id="icon_creditcard" type="tel" class="validate">
+            <label for="icon_creditcard">Credit Card No.</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="fa fa-calendar material-icons prefix"></i>
+            <input id="icon_expire" type="tel" class="validate">
+            <label for="icon_expire">Expiration Date</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input type="checkbox" id="recurring1" />
+            <label for="recurring1">Make this a monthly contribution</label>
+            <div id="recurring-duration1" class="input-field col s6">
+              <form action="#">
+                <p>
+                  <input name="group1" type="radio" id="duration-12" />
+                  <label for="duration-12">for 12 months</label>
+                </p>
+                <p>
+                  <input name="group1" type="radio" id="duration-24" />
+                  <label for="duration-24">for 24 months</label>
+                </p>
+                <p>
+                  <input name="group1" type="radio" id="duration-36" />
+                  <label for="duration-36">for 36 months</label>
+                </p>
+              </form>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
 
-    <!-- DONATION FORM: TAX-RELIEF -->
-    <div id="relief">
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate" ng-model="name">
-              <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">picture_in_picture</i>
-              <input id="icon_nric" type="text" class="validate">
-              <label for="icon_nric">NRIC</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">work</i>
-              <input id="icon_company" type="text" class="validate">
-              <label for="icon_company">Company Reg. No.</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Contact No.</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">location_on</i>
-              <input id="icon_address" type="tel" class="validate">
-              <label for="icon_address">Address</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input id="icon_email" type="tel" class="validate">
-              <label for="icon_email">Email</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
-              <input id="icon_donation2" type="tel" class="validate">
-              <label for="icon_donation2"></label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">payment</i>
-              <input id="icon_creditcard" type="tel" class="validate">
-              <label for="icon_creditcard">Credit Card No.</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <i class="fa fa-calendar"></i>
-              <input id="icon_expire" type="tel" class="validate">
-              <label for="icon_expire">Expiration Date</label>
-            </div>
-
-            <div class="input-field col s12 m6">
-              <input type="checkbox" id="recurring2" />
-              <label for="recurring2">Make this a monthly contribution</label>
-              <div id="recurring-duration2" class="input-field col s12 m6">
-                <form action="#">
-                  <p>
-                    <input name="group1" type="radio" id="duration-12" />
-                    <label for="duration-12">for 12 months</label>
-                  </p>
-                  <p>
-                    <input name="group1" type="radio" id="duration-24" />
-                    <label for="duration-24">for 24 months</label>
-                  </p>
-                  <p>
-                    <input name="group1" type="radio" id="duration-36" />
-                    <label for="duration-36">for 36 months</label>
-                  </p>
-                </form>
-              </div>
-            </div>
-
-            <div class="input-field col s6">
-              <input type="checkbox" id="newsletter2" checked="checked" />
-              <label for="newsletter2">Subscribe to our Newsletter</label>
-            </div>
-
+          <div class="input-field col s6">
+            <input type="checkbox" id="newsletter1" checked="checked" />
+            <label for="newsletter1">Subscribe to our Newsletter</label>
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row center-align">
-        <button id="submit-button" class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s3" type="submit" name="action">
-          SUBMIT
-        </button>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 
-  <script>
-    $(function pageLoaded() {
-      //SCRIPTS FOR FORM
-      $('ul.tabs').tabs();
-      $('select').material_select();
+  <!-- DONATION FORM: TAX-RELIEF -->
+  <div id="relief">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" ng-model="name">
+            <label for="icon_prefix">Name</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">picture_in_picture</i>
+            <input id="icon_nric" type="text" class="validate">
+            <label for="icon_nric">NRIC</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">work</i>
+            <input id="icon_company" type="text" class="validate">
+            <label for="icon_company">Company Reg. No.</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Contact No.</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">location_on</i>
+            <input id="icon_address" type="tel" class="validate">
+            <label for="icon_address">Address</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_email" type="tel" class="validate">
+            <label for="icon_email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
+            <input id="icon_donation2" type="tel" class="validate">
+            <label for="icon_donation2"></label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">payment</i>
+            <input id="icon_creditcard" type="tel" class="validate">
+            <label for="icon_creditcard">Credit Card No.</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="fa fa-calendar"></i>
+            <input id="icon_expire" type="tel" class="validate">
+            <label for="icon_expire">Expiration Date</label>
+          </div>
+
+          <div class="input-field col s12 m6">
+            <input type="checkbox" id="recurring2" />
+            <label for="recurring2">Make this a monthly contribution</label>
+            <div id="recurring-duration2" class="input-field col s12 m6">
+              <form action="#">
+                <p>
+                  <input name="group1" type="radio" id="duration-12" />
+                  <label for="duration-12">for 12 months</label>
+                </p>
+                <p>
+                  <input name="group1" type="radio" id="duration-24" />
+                  <label for="duration-24">for 24 months</label>
+                </p>
+                <p>
+                  <input name="group1" type="radio" id="duration-36" />
+                  <label for="duration-36">for 36 months</label>
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <div class="input-field col s6">
+            <input type="checkbox" id="newsletter2" checked="checked" />
+            <label for="newsletter2">Subscribe to our Newsletter</label>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row center-align">
+      <button id="submit-button" class="btn waves-effect waves-light #fb8c00 orange" type="submit" name="action">
+        SUBMIT
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function pageLoaded() {
+    //SCRIPTS FOR FORM
+    $('ul.tabs').tabs();
+    $('select').material_select();
+    $('#recurring-duration1').hide();
+    $('#recurring-duration2').hide();
+
+    //SCRIPT FOR SLIDER
+    var array = [
+      //Range 1
+      {
+        color: '#ffecb3',
+        name: "Day-to-day",
+        icon: "fa fa-5x fa-usd",
+        teenProblem: "Provide a week's worth of pocket money for school",
+        pregnantProblem: "Provide a week's worth of daily meals"
+      },
+      //Range 2
+      {
+        color: '#ffd54f ',
+        name: "Basic",
+        icon: "fa fa-5x fa-female",
+        teenProblem: "Provide her in-house education for a week",
+        pregnantProblem: "Provide residential services for a day"
+      },
+      //Range 3
+      {
+        color: '#ffc107 ',
+        name: "Education",
+        icon: "fa fa-5x fa-graduation-cap",
+        teenProblem: "Provide her in-house education for 1 month",
+        pregnantProblem: "Support her through counselling & prenatal classes"
+      },
+      //Range 4
+      {
+        color: '#ffa000 ',
+        name: "Therapy",
+        icon: "fa fa-5x fa-heart",
+        teenProblem: "Support her counselling & clinical therapy for 1 month",
+        pregnantProblem: "Provide essentials for her new-born"
+      },
+      //Range 5
+      {
+        color: '#ff8f00 ',
+        name: "Residential",
+        icon: "fa fa-5x fa-home",
+        teenProblem: "Provide full residential services for 2 months",
+        pregnantProblem: "Provide residential services for 1 month"
+      },
+      //Range 6
+      {
+        color: '#ff6f00 ',
+        name: "Full Support",
+        icon: "fa fa-5x fa-users",
+        teenProblem: "Support her education & clinical programmes for 2 months",
+        pregnantProblem: "Provide for a new mother & child for 2 months"
+      },
+      //Range 7
+      {
+        color: '#ee035b',
+        name: "Invaluable Gift",
+        icon: "fa fa-5x fa-gift",
+        teenProblem: "",
+        pregnantProblem: ""
+      }
+    ]
+
+    $("#text-input").on("input", function() {
+      $("#slider-input").val(this.value);
+      $("#icon_donation1").val(this.value);
+      $("#icon_donation2").val(this.value);
+      updateDisplay(this.value);
+    });
+
+    $("#slider-input").on("input", function() {
+      $("#text-input").val(this.value);
+      $("#icon_donation1").val(this.value);
+      $("#icon_donation2").val(this.value);
+      updateDisplay(this.value);
+    });
+
+    $("#icon_donation1").on("input", function() {
+      $("#slider-input").val(this.value);
+      $("#text-input").val(this.value);
+      updateDisplay(this.value);
+    })
+
+    $("#icon_donation2").on("input", function() {
+      $("#slider-input").val(this.value);
+      $("#text-input").val(this.value);
+      updateDisplay(this.value);
+    })
+
+    $("#recurring-donate").on("click", function() {
+      $("#recurring1").attr("checked", true);
+      $("#recurring2").attr("checked", true);
+      $('#recurring-duration1').show();
+      $('#recurring-duration2').show();
+    });
+
+    $("#non-recurring-donate").on("click", function() {
+      $("#recurring1").attr("checked", false);
+      $("#recurring2").attr("checked", false);
       $('#recurring-duration1').hide();
       $('#recurring-duration2').hide();
-
-      //SCRIPT FOR SLIDER
-      var array = [
-        //Range 1
-        {
-          color: '#ffecb3',
-          name: "DAY TO DAY",
-          icon: "fa fa-5x fa-usd",
-          teenProblem: "Provide a week's worth of pocket money for school",
-          pregnantProblem: "Provide a week's worth of daily meals"
-        },
-        //Range 2
-        {
-          color: '#ffd54f ',
-          name: "BASIC",
-          icon: "fa fa-5x fa-female",
-          teenProblem: "Provide her in-house education for a week",
-          pregnantProblem: "Provide residential services for a day"
-        },
-        //Range 3
-        {
-          color: '#ffc107 ',
-          name: "EDUCATION",
-          icon: "fa fa-5x fa-graduation-cap",
-          teenProblem: "Provide her in-house education for 1 month",
-          pregnantProblem: "Support her through counselling & prenatal classes"
-        },
-        //Range 4
-        {
-          color: '#ffa000 ',
-          name: "THERAPY",
-          icon: "fa fa-5x fa-heart",
-          teenProblem: "Support her counselling & clinical therapy for 1 month",
-          pregnantProblem: "Provide essentials for her new-born"
-        },
-        //Range 5
-        {
-          color: '#ff8f00 ',
-          name: "RESIDENTIAL",
-          icon: "fa fa-5x fa-home",
-          teenProblem: "Provide full residential services for 2 months",
-          pregnantProblem: "Provide residential services for 1 month"
-        },
-        //Range 6
-        {
-          color: '#ff6f00 ',
-          name: "FULL SUPPORT",
-          icon: "fa fa-5x fa-users",
-          teenProblem: "Support her education & clinical programmes for 2 months",
-          pregnantProblem: "Provide for a new mother & child for 2 months"
-        },
-        //Range 7
-        {
-          color: '#80cbc4 ',
-          name: "OTHERS",
-          icon: "fa fa-5x fa-gift",
-          teenProblem: "",
-          pregnantProblem: ""
-        }
-      ]
-
-      $("#text-input").on("input", function() {
-        $("#slider-input").val(this.value);
-        $("#icon_donation1").val(this.value);
-        $("#icon_donation2").val(this.value);
-        updateDisplay(this.value);
-      });
-
-      $("#slider-input").on("input", function() {
-        $("#text-input").val(this.value);
-        $("#icon_donation1").val(this.value);
-        $("#icon_donation2").val(this.value);
-        updateDisplay(this.value);
-      });
-
-      $("#icon_donation1").on("input", function() {
-        $("#slider-input").val(this.value);
-        $("#text-input").val(this.value);
-        updateDisplay(this.value);
-      })
-
-      $("#icon_donation2").on("input", function() {
-        $("#slider-input").val(this.value);
-        $("#text-input").val(this.value);
-        updateDisplay(this.value);
-      })
-
-      $("#recurring-donate").on("click", function() {
-        $("#recurring1").attr("checked", true);
-        $("#recurring2").attr("checked", true);
-        $('#recurring-duration1').show();
-        $('#recurring-duration2').show();
-      });
-
-      $("#non-recurring-donate").on("click", function() {
-        $("#recurring1").attr("checked", false);
-        $("#recurring2").attr("checked", false);
-        $('#recurring-duration1').hide();
-        $('#recurring-duration2').hide();
-      });
-
-      $("#recurring1").on("change", function() {
-        if (this.checked == true) {
-          $('#recurring-duration1').show();
-        } else {
-          $('#recurring-duration1').hide();
-        }
-      });
-      $("#recurring2").on("change", function() {
-        if (this.checked == true) {
-          $('#recurring-duration2').show();
-        } else {
-          $('#recurring-duration2').hide();
-        }
-      });
-
-      function updateDisplay(value) {
-        console.log(value);
-
-        if (value < 100) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[0].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[0].icon);
-          $("#cause-color").css({
-            'background-color': array[0].color
-          });
-          $('#teen-problem').html(array[0].teenProblem);
-          $('#pregnant-problem').html(array[0].pregnantProblem);
-        } else if (value < 500) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[1].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[1].icon);
-          $("#cause-color").css({
-            'background-color': array[1].color
-          });
-          $('#teen-problem').html(array[1].teenProblem);
-          $('#pregnant-problem').html(array[1].pregnantProblem);
-        } else if (value < 1000) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[2].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[2].icon);
-          $("#cause-color").css({
-            'background-color': array[2].color
-          });
-          $('#teen-problem').html(array[2].teenProblem);
-          $('#pregnant-problem').html(array[2].pregnantProblem);
-        } else if (value < 2000) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[3].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[3].icon);
-          $("#cause-color").css({
-            'background-color': array[3].color
-          });
-          $('#teen-problem').html(array[3].teenProblem);
-          $('#pregnant-problem').html(array[3].pregnantProblem);
-        } else if (value < 4999) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[4].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[4].icon);
-          $("#cause-color").css({
-            'background-color': array[4].color
-          });
-          $('#teen-problem').html(array[4].teenProblem);
-          $('#pregnant-problem').html(array[4].pregnantProblem);
-        } else if (value < 5599) {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[5].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[5].icon);
-          $("#cause-color").css({
-            'background-color': array[5].color
-          });
-          $('#teen-problem').html(array[5].teenProblem);
-          $('#pregnant-problem').html(array[5].pregnantProblem);
-        } else {
-          $("#pregnant-title").show();
-          $('#teen-title').show();
-          $("#cause-name").html(array[6].name);
-          $("#cause-icon").removeClass();
-          $("#cause-icon").addClass(array[6].icon);
-          $("#cause-color").css({
-            'background-color': array[6].color
-          });
-          $("#pregnant-title").hide();
-          $('#teen-title').hide();
-          $('#teen-problem').html("OMG you're so generous!");
-          $('#pregnant-problem').html("Please enter your donation amount below:");
-          // $('#teen-problem').html("THANK YOU!");
-          // $('#pregnant-problem').html("You're so generous!");
-        }
-      }
-
     });
-  </script>
+
+    $("#recurring1").on("change", function() {
+      if (this.checked == true) {
+        $('#recurring-duration1').show();
+      } else {
+        $('#recurring-duration1').hide();
+      }
+    });
+    $("#recurring2").on("change", function() {
+      if (this.checked == true) {
+        $('#recurring-duration2').show();
+      } else {
+        $('#recurring-duration2').hide();
+      }
+    });
+
+    function updateDisplay(value) {
+      if (value < 100) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[0].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[0].icon);
+        $("#cause-color").css({
+          'background-color': array[0].color
+        });
+        $('#teen-problem').html(array[0].teenProblem);
+        $('#pregnant-problem').html(array[0].pregnantProblem);
+      } else if (value < 500) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[1].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[1].icon);
+        $("#cause-color").css({
+          'background-color': array[1].color
+        });
+        $('#teen-problem').html(array[1].teenProblem);
+        $('#pregnant-problem').html(array[1].pregnantProblem);
+      } else if (value < 1000) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[2].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[2].icon);
+        $("#cause-color").css({
+          'background-color': array[2].color
+        });
+        $('#teen-problem').html(array[2].teenProblem);
+        $('#pregnant-problem').html(array[2].pregnantProblem);
+      } else if (value < 2000) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[3].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[3].icon);
+        $("#cause-color").css({
+          'background-color': array[3].color
+        });
+        $('#teen-problem').html(array[3].teenProblem);
+        $('#pregnant-problem').html(array[3].pregnantProblem);
+      } else if (value < 4999) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[4].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[4].icon);
+        $("#cause-color").css({
+          'background-color': array[4].color
+        });
+        $('#teen-problem').html(array[4].teenProblem);
+        $('#pregnant-problem').html(array[4].pregnantProblem);
+      } else if (value < 5599) {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[5].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[5].icon);
+        $("#cause-color").css({
+          'background-color': array[5].color
+        });
+        $('#teen-problem').html(array[5].teenProblem);
+        $('#pregnant-problem').html(array[5].pregnantProblem);
+      } else {
+        $("#pregnant-title").show();
+        $('#teen-title').show();
+        $("#cause-name").html(array[6].name);
+        $("#cause-icon").removeClass();
+        $("#cause-icon").addClass(array[6].icon);
+        $("#cause-color").css({
+          'background-color': array[6].color
+        });
+        $("#pregnant-title").hide();
+        $('#teen-title').hide();
+        $('#teen-problem').html("OMG you're so generous!");
+        $('#pregnant-problem').html("Please enter your donation amount below:");
+        // $('#teen-problem').html("THANK YOU!");
+        // $('#pregnant-problem').html("You're so generous!");
+      }
+    }
+
+  });
+</script>

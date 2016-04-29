@@ -1,71 +1,38 @@
 <div>
-  <div class="ds-banner">
-    <div class="container">
-      <img class="ds-logo" src="images/logo.png">
+  <h1 class="center-align">Thank you!</h1>
+  <p class="lead">
+    <h5>Send a postcard to our residents: </h5>
+    <div class="carousel">
+      <div class="postcard">
+        <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg" alt=""/></a>
+        <h3 class="postcardtext center-align">{{msg}}</h3>
+        <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
+
+      <div class="postcard">
+        <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
+        <h3 class="postcardtext center-align">{{msg}}</h3>
+        <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
+
+      <div class="postcard">
+        <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
+        <h3 class="postcardtext center-align">{{msg}}</h3>
+        <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
+
+      <div class="postcard">
+        <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
+        <h3 class="postcardtext center-align">{{msg}}</h3>
+        <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
+
+      <div class="postcard">
+        <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-7.jpg"></a>
+        <h3 class="postcardtext center-align">{{msg}}</h3>
+        <h5 class="postcardsubtext center-align">{{name}}</h5>
+      </div>
     </div>
-  </div>
-  <div class="header ds-nav">
-    <nav>
-      <div class="nav-wrapper orange darken-3">
-        <div class="container">
-          <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="left hide-on-med-and-down">
-            <li><a href="#/">Donate</a></li>
-            <li class="active"><a href="#/message">Message</a></li>
-            <li><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-          <div id="status" class="right"></div>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#/">Donate</a></li>
-            <li class="active"><a href="#/message">Message</a></li>
-            <li><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!--Facebook Login Button social plugin-->
-  <div class="FB-login right">
-      <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" show_faces=true auto_logout_link="true">
-      </fb:login-button>
-  </div>
-
-  <div class="container">
-    <h1 class="center-align">Thank you!</h1>
-    <p class="lead">
-      <h5>Send a postcard to our residents: </h5>
-      <div class="carousel">
-        <div class="postcard">
-          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg" alt=""/></a>
-          <h3 class="postcardtext center-align">{{msg}}</h3>
-          <h5 class="postcardsubtext center-align">{{name}}</h5>
-        </div>
-
-        <div class="postcard">
-          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
-          <h3 class="postcardtext center-align">{{msg}}</h3>
-          <h5 class="postcardsubtext center-align">{{name}}</h5>
-        </div>
-
-        <div class="postcard">
-          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
-          <h3 class="postcardtext center-align">{{msg}}</h3>
-          <h5 class="postcardsubtext center-align">{{name}}</h5>
-        </div>
-
-        <div class="postcard">
-          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
-          <h3 class="postcardtext center-align">{{msg}}</h3>
-          <h5 class="postcardsubtext center-align">{{name}}</h5>
-        </div>
-
-        <div class="postcard">
-          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-7.jpg"></a>
-          <h3 class="postcardtext center-align">{{msg}}</h3>
-          <h5 class="postcardsubtext center-align">{{name}}</h5>
-        </div>
-      </div>
 
       <form>
         <div class="form-group">
@@ -116,9 +83,59 @@
           </li>
         </ul>
     </div>
+
+    <form>
+      <div class="form-group">
+        <label for="from"></label>
+        <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="message"></label>
+        <input type="text" class="form-control" ng-model="msg" placeholder="Message">
+      </div>
+      <!-- <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p> -->
+      <p class="right-align"><a class="waves-effect waves-light btn" ng-click="addMessage()"><i class="material-icons left">email</i>Send</a></p>
+    </form>
+  </p>
+
+  <h3> Facebook feed & sharing buttons here</h3>
+  <hr>
+  <h3> Thank you, your message has been sent! </h3>
+  <div id="gallery"><h5> How others have shown their love: </h5></div>
+  <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>{{ msg.body }}</h3>
+            <h5 class="light grey-text text-lighten-3">{{ msg.from }}</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+          <div class="caption left-align">
+            <h3>This is the message</h3>
+            <h5 class="light grey-text text-lighten-3">Message Author</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+          <div class="caption right-align">
+            <h3>This is the message</h3>
+            <h5 class="light grey-text text-lighten-3">Message Author</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>This is the message</h3>
+            <h5 class="light grey-text text-lighten-3">Message Author</h5>
+          </div>
+        </li>
+      </ul>
+
   </div>
 </div>
-
 <script>
 $(function pageLoaded() {
   //FOR SIDE NAV BAR

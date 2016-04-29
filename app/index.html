@@ -40,12 +40,48 @@
 
 
     <!-- Add your site or application content here -->
-    <div ng-view="">
-    </div>
+    <div>
+      <div class="ds-banner">
+        <div class="container row">
+          <img class="ds-logo col s12 m6 l6" src="images/logo.png">
+        </div>
+      </div>
+
+      <div class="header ds-nav">
+        <nav>
+          <div class="nav-wrapper orange darken-3">
+            <div class="container">
+              <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="left hide-on-med-and-down valign-wrapper">
+                <li><a href="#/">Donate</a></li>
+                <li><a href="#/message">Message</a></li>
+                <li><a href="#/dashboard">Dashboard</a></li>
+              </ul>
+              <ul class="right hide-on-med-and-down valign-wrapper">
+                <div id="status"></div>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li class="active"><a href="#/">Donate</a></li>
+                <li><a href="#/message">Message</a></li>
+                <li><a href="#/dashboard">Dashboard</a></li>
+              </ul>
+              <div class="FB-login right">
+                <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" auto_logout_link="true"></fb:login-button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!--Facebook Login Button social plugin-->
+      <div class="container">
+        <div ng-view="">
+        </div>
+      </div>
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the HOLT team</p>
+        <p>Made with <span class="glyphicon glyphicon-heart"></span> from the HOLT team</p>
       </div>
     </div>
 
