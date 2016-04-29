@@ -1,7 +1,7 @@
 <div>
   <div class="ds-banner">
-    <div class="container">
-      <img class="ds-logo" src="images/logo.png">
+    <div class="container row">
+      <img class="ds-logo col s12 m6 l6" src="images/logo.png">
     </div>
   </div>
 
@@ -15,16 +15,7 @@
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
-          <li class="right valign">
-            <!--Facebook Login Button social plugin-->
-            <fb:login-button scope="public_profile,email,publish_pages,status_update,publish_actions,manage_pages" onlogin="checkLoginState();">
-            </fb:login-button>
-          </li>
-          <li>
-            <div id="status"></div>
-          </li>
-
-
+          <div id="status" class="right"></div>
           <ul class="side-nav" id="mobile-demo">
             <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
@@ -33,6 +24,12 @@
         </div>
       </div>
     </nav>
+  </div>
+
+  <!--Facebook Login Button social plugin-->
+  <div class="FB-login right">
+      <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" show_faces=true auto_logout_link="true">
+      </fb:login-button>
   </div>
 
   <div class="container">
