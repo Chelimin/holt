@@ -128,7 +128,13 @@
             console.log("Sorry! No Web Storage support..");
           }
         </script>
-        
+
+        <!--Facebook Login Button social plugin-->
+        <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();">
+        </fb:login-button>
+        <div id="status">
+        </div>
+
         <!-- endbuild -->
 </body>
 </html>

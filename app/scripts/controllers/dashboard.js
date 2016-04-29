@@ -28,13 +28,21 @@ angular.module('dayspringApp')
 
       $scope.postToFacebook = function (message) {
         FB.api(
-          '/577194379124444/feed',
-          'POST',
-          {
-            message: message.body
-          },
+          '/me/accounts',
           function (response) {
-            console.log(response);
+            var page = response.data[0];
+            var fbPost = message.body + '\n\nFrom: ' + message.from;
+            FB.api(
+              '/' + page.id + '/feed',
+              'POST',
+              {
+                message: fbPost,
+                access_token: page.access_token
+              },
+              function (data) {
+                console.log(data);
+              }
+            );
           }
         );
       };
