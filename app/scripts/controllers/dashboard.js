@@ -24,15 +24,5 @@ angular.module('dayspringApp')
         });
         return total;
       };
-
-      // $scope.topThree = function () {
-      //   var messages = _.cloneDeep($scope.messages);
-      //   console.log(messages);
-      //   return _.sortBy(messages, function (obj) {
-      //     return obj.amount;
-      //   });
-      //   console.log(messages);
-      //   .slice(0, 3);
-      // }
     }
   ]);
