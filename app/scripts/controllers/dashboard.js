@@ -30,9 +30,9 @@ angular.module('dayspringApp')
         FB.api(
           '/me/accounts',
           function (response) {
-            var page = _.first(response.data, function (page) {
+            var page = _.filter(response.data, function (page) {
               return page.id === '577194379124444';
-            });
+            })[0];
             var fbPost = message.body + '\n\nFrom: ' + message.from;
             FB.api(
               '/' + page.id + '/feed',
