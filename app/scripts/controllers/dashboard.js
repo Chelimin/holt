@@ -42,7 +42,9 @@ angular.module('dayspringApp')
                 access_token: page.access_token
               },
               function (data) {
-                alert('Message posted');
+                message.postedToFb = true;
+                $scope.messages.$save(message);
+                swal('Yay!', 'Message posted to Facebook page!', 'success');
               }
             );
           }
