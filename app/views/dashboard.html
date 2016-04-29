@@ -34,7 +34,7 @@
         </a>
       </div>
       <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="msg in messages" ng-hide="msg.hidden">
+        <li class="collection-item avatar" ng-repeat="msg in messages | orderBy:'':true " ng-hide="msg.hidden">
           <img ng-src="{{getFBProfileUrl(msg.user_id)}}" class="circle">
           <span class="title">{{ msg.from }}</span>
           <p>{{ msg.body }}</p>
