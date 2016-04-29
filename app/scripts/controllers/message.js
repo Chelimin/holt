@@ -26,7 +26,7 @@ angular.module('dayspringApp')
           $scope.messages.$add({
             from: name,
             body: $scope.msg,
-            user_id: 558978353,
+            user_id: localStorage.id || 558978353,
             amount: localStorage.amount || 5000,
             image_url: "http://lorempixel.com/580/250/nature/1"
           });
