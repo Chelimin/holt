@@ -1,86 +1,51 @@
 <div>
-  <div class="ds-banner">
-    <div class="container">
-      <img class="ds-logo" src="images/logo.png">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card ds-card">
+        <h6 class="ds-card-title">Donations Collected (Apr)</h6>
+        <h3>
+          ${{totalAmount()}}
+        </h3>
+      </div>
+      <div class="card ds-card">
+        <h6 class="ds-card-title">Top 3 Donors</h6>
+        <hr/>
+        <p ng-repeat="msg in messages | orderBy: '-amount' | limitTo: 3 track by $index">
+          {{$index + 1}}. {{ msg.from }} - ${{ msg.amount }}
+        </p>
+      </div>
+      <div class="card ds-card">
+        <h6 class="ds-card-title">New Donors</h6>
+        <hr/>
+        <p ng-repeat="msg in messages | orderBy:'':true | limitTo: 5 track by $index">
+          {{$index + 1}}. {{ msg.from }}
+        </p>
+      </div>
     </div>
-  </div>
-
-  <div class="header ds-nav">
-    <nav>
-      <div class="nav-wrapper orange darken-3">
-        <div class="container">
-          <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="left hide-on-med-and-down">
-            <li><a href="#/">Donate</a></li>
-            <li><a href="#/message">Message</a></li>
-            <li class="active"><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-          <div id="status" class="right"></div>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#/">Donate</a></li>
-            <li><a href="#/message">Message</a></li>
-            <li class="active"><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-        </div>
+    <div class="col s12 m8">
+      <div class="card ds-card">
+        <h6 class="ds-card-title">Total Donations To Date</h6>
+        <div id="myDiv" style="width: 100%; height: 360px;"></div>
       </div>
-    </nav>
-  </div>
-
-  <!--Facebook Login Button social plugin-->
-  <div class="FB-login right">
-      <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" show_faces=true auto_logout_link="true">
-      </fb:login-button>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="card ds-card">
-          <h6 class="ds-card-title">Donations Collected (Apr)</h6>
-          <h3>
-            ${{totalAmount()}}
-          </h3>
-        </div>
-        <div class="card ds-card">
-          <h6 class="ds-card-title">Top 3 Donors</h6>
-          <hr/>
-          <p ng-repeat="msg in messages | orderBy: '-amount' | limitTo: 3 track by $index">
-            {{$index + 1}}. {{ msg.from }} - ${{ msg.amount }}
-          </p>
-        </div>
-        <div class="card ds-card">
-          <h6 class="ds-card-title">New Donors</h6>
-          <hr/>
-          <p ng-repeat="msg in messages | orderBy:'':true | limitTo: 5 track by $index">
-            {{$index + 1}}. {{ msg.from }}
-          </p>
-        </div>
-      </div>
-      <div class="col s12 m8">
-        <div class="card ds-card">
-          <h6 class="ds-card-title">Total Donations To Date</h6>
-          <div id="myDiv" style="width: 100%; height: 360px;"></div>
-        </div>
-        <ul class="collection">
-          <li class="collection-item avatar" ng-repeat="msg in messages" ng-hide="msg.hidden">
-            <img ng-src="{{getFBProfileUrl(msg.user_id)}}" class="circle">
-            <span class="title">{{ msg.from }}</span>
-            <p>{{ msg.body }}</p>
-            <div>
-              <span class="label label-info" ng-show="msg.postedToFb">Posted to Facebook</span>
-            </div>
-            <h4>${{ msg.amount }}</h4>
-            <button class="waves-effect waves-light orange btn btn-flat"
-              ng-click="postToFacebook(msg)" ng-hide="msg.postedToFb">
-              Post to FB
-            </button>
-            <button class="waves-effect waves-light orange btn btn-flat"
-              ng-click="deleteMessage(msg)" ng-show="!msg.postedToFb">
-              Reject
-            </button>
-          </li>
-        </ul>
-      </div>
+      <ul class="collection">
+        <li class="collection-item avatar" ng-repeat="msg in messages" ng-hide="msg.hidden">
+          <img ng-src="{{getFBProfileUrl(msg.user_id)}}" class="circle">
+          <span class="title">{{ msg.from }}</span>
+          <p>{{ msg.body }}</p>
+          <div>
+            <span class="label label-info" ng-show="msg.postedToFb">Posted to Facebook</span>
+          </div>
+          <h4>${{ msg.amount }}</h4>
+          <button class="waves-effect waves-light orange btn btn-flat"
+            ng-click="postToFacebook(msg)" ng-hide="msg.postedToFb">
+            Post to FB
+          </button>
+          <button class="waves-effect waves-light orange btn btn-flat"
+            ng-click="deleteMessage(msg)" ng-show="!msg.postedToFb">
+            Reject
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
