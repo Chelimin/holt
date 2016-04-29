@@ -29,7 +29,9 @@
   <div class="container">
     <div class="row">
       <div class="col s8">
-        <div class="card ds-card" id="myDiv" style="width: 420px; height: 360px;">
+        <div class="card ds-card">
+          <h6 class="ds-card-title">Total Donations To Date</h6>
+          <div id="myDiv" style="width: 100%; height: 360px;"></div>
         </div>
         <div class="card ds-card">
           <div ng-repeat="msg in messages" class="row" ng-hide="msg.hidden">
@@ -56,8 +58,7 @@
       </div>
       <div class="col s4">
         <div class="card ds-card">
-
-          <h6>Donations Collected (Apr)</h6>
+          <h6 class="ds-card-title">Donations Collected (Apr)</h6>
           <h3>
             ${{totalAmount()}}
           </h3>
@@ -107,7 +108,6 @@ marker: {
 var data = [trace1, trace2];
 
 var layout = {
-title: 'Total Donations Year-To-Date',
 xaxis: {
   tickangle: -45
 },
