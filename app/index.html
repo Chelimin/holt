@@ -28,8 +28,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+    <!--Facebook Login Button social plugin-->
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+    <div id="status">
+    </div>
 
+    <!-- Add your site or application content here -->
     <div ng-view=""></div>
     </div>
 
@@ -62,11 +67,6 @@
         <script src="scripts/controllers/donation.js"></script>
         <script src="scripts/controllers/message.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
-
-        <!-- Scripts for materialize components -->
-        <script>
-          $(".button-collapse").sideNav();
-        </script>
 
         <!-- Facebook SDK -->
         <script>
@@ -140,7 +140,6 @@
         </fb:login-button>
         <div id="status">
         </div>
-
         <!-- endbuild -->
 </body>
 </html>

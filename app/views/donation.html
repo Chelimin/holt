@@ -11,12 +11,12 @@
         <div class="container">
           <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="left hide-on-med-and-down">
-            <li><a href="#/">Home</a></li>
+            <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="#/">Home</a></li>
+            <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
@@ -35,7 +35,7 @@
       </div>
 
       <!--Cause Box-->
-      <div class="row valign-wrapper" style="border: 1px solid black">
+      <div class="row valign-wrapper" style="border: 1px solid red accent-1">
         <div id="cause-color" class="col s6 center-align valign">
           <h3 id="cause-name">DAY TO DAY</h3>
           <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
@@ -243,8 +243,6 @@
 
   <script>
     $(function pageLoaded() {
-      //FOR SIDE NAV BAR
-      $(".button-collapse").sideNav();
       //SCRIPTS FOR FORM
       $('ul.tabs').tabs();
       $('select').material_select();
@@ -326,6 +324,12 @@
       });
 
       $("#icon_donation1").on("input", function() {
+        $("#slider-input").val(this.value);
+        $("#text-input").val(this.value);
+        updateDisplay(this.value);
+      })
+
+      $("#icon_donation2").on("input", function() {
         $("#slider-input").val(this.value);
         $("#text-input").val(this.value);
         updateDisplay(this.value);
@@ -446,5 +450,7 @@
           // $('#pregnant-problem').html("You're so generous!");
         }
       }
+      //FOR SIDE NAV BAR
+      $(".button-collapse").sideNav();
     });
   </script>

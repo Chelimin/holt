@@ -4,26 +4,25 @@
       <img class="ds-logo" src="images/logo.png">
     </div>
   </div>
+
   <div class="header ds-nav">
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="js-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#/">Home</a></li>
-            <li><a ng-href="#/message">Message</a></li>
-            <li><a ng-href="#/dashboard">Dashboard</a></li>
+    <nav>
+      <div class="nav-wrapper orange darken-3">
+        <div class="container">
+          <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="#/">Donate</a></li>
+            <li><a href="#/message">Message</a></li>
+            <li class="active"><a href="#/dashboard">Dashboard</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#/">Donate</a></li>
+            <li><a href="#/message">Message</a></li>
+            <li class="active"><a href="#/dashboard">Dashboard</a></li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </div>
 
   <div class="container">
@@ -85,6 +84,7 @@
 </div>
 
 <script>
+<<<<<<< Updated upstream
   var trace1 = {
 x: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 y: [20000, 14000, 25000, 16000, 18000, 22000, 19000, 15000, 12000, 16000, 14000, 17000],
@@ -117,4 +117,9 @@ barmode: 'group'
 };
 
 Plotly.newPlot('myDiv', data, layout);
+=======
+  $(function pageLoaded() {
+    $(".button-collapse").sideNav();
+  });
+>>>>>>> Stashed changes
 </script>
