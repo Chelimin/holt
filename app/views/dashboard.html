@@ -43,10 +43,12 @@
                 </div>
                 <div class="col s3">
                   <h4>${{ msg.amount }}</h4>
-                  <button class="waves-effect waves-light orange btn btn-sm">
+                  <button class="waves-effect waves-light orange btn btn-sm"
+                    ng-click="postToFacebook(msg)">
                     Post to FB
                   </button>
-                  <button class="waves-effect waves-light orange btn btn-sm" ng-click="deleteMessage(msg)">
+                  <button class="waves-effect waves-light orange btn btn-sm"
+                    ng-click="deleteMessage(msg)">
                     Reject
                   </button>
                 </div>

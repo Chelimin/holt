@@ -25,5 +25,18 @@ angular.module('dayspringApp')
         });
         return total;
       };
+
+      $scope.postToFacebook = function (message) {
+        FB.api(
+          '/577194379124444/feed',
+          'POST',
+          {
+            message: message.body
+          },
+          function (response) {
+            console.log(response);
+          }
+        );
+      };
     }
   ]);
