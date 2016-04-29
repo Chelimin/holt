@@ -55,5 +55,34 @@ angular.module('dayspringApp')
       $scope.getFBProfileUrl = function (id) {
         return 'https://graph.facebook.com/' + id + '/picture?type=large';
       }
+
+      $scope.csv = function () {
+          //  http://stackoverflow.com/questions/17836273/export-javascript-data
+          //  -to-csv-file-without-server-interaction
+          var twoDiArray = [];
+          twoDiArray.push(['Name', 'Amount']);
+          $scope.messages.forEach(function (msg) {
+            twoDiArray.push([msg.from, msg.amount]);
+          });
+
+          var csvRows = [];
+          for (var i = 0; i < twoDiArray.length; ++i) {
+              for (var j = 0; j < twoDiArray[i].length; ++j) {
+                  twoDiArray[i][j] = '\"' + twoDiArray[i][j] + '\"';
+              }
+              csvRows.push(twoDiArray[i].join(','));
+          }
+
+          var csvString = csvRows.join('\r\n');
+          var $a = $('<a></a>', {
+                  href: 'data:attachment/csv;charset=utf-8,' + escape(csvString),
+                  target: '_blank',
+                  download: 'donations.csv'
+              });
+
+          $('body').append($a[0]);
+          $a.get(0).click();
+          $a.remove();
+      }
     }
   ]);
