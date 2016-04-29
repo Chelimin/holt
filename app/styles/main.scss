@@ -13,14 +13,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /* Custom page header */
 .header {
   margin-bottom: 10px;
@@ -148,3 +140,7 @@ i {
 //  h6{
 //     border: 1px solid black;
 // }
+
+.thumb.active {
+  display: none;
+}

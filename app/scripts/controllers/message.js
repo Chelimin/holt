@@ -10,13 +10,12 @@
 angular.module('dayspringApp')
   .controller('MessageCtrl', ['$scope', '$firebaseArray', '$location', '$anchorScroll',
     function ($scope, $firebaseArray, $location, $anchorScroll) {
-      var ref = new Firebase('https://dayspring-hackathon.firebaseio.com/');
+      var ref = new window.Firebase('https://dayspring-hackathon.firebaseio.com/');
       $scope.messages = $firebaseArray(ref);
-      $scope.addMessage = function(e) {
-
+      $scope.addMessage = function() {
         $location.hash('gallery');
          $anchorScroll();
-         
+
         if ($scope.msg) {
           var name = $scope.name || 'anonymous';
 
