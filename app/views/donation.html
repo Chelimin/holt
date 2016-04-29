@@ -1,215 +1,245 @@
-<!--GABRIELLE'S SLIDER-->
-<form id="slider-form">
-  <!--TITLE-->
-  <div>
-    <h1>Message of Hope</h1>
+<div>
+  <div class="ds-banner">
+    <img src="images/logo.png">
   </div>
+  <div class="header">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
 
-  <!--Cause Box-->
-  <div class="row valign-wrapper" style="border: 1px solid black">
-    <div id="cause-color" class="col s6 center-align valign">
-      <h3 id="cause-name">DAY TO DAY</h3>
-      <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
-    </div>
-    <div id="cause-div" class="col s6 valign">
-      <h6 id="teen-title" class="left-align">Abused Teen Girls</h6>
-      <h5 id="teen-problem" class="left-align">Provide a week's worth of pocket money for school</h5>
-      <br>
-      <h6 id="pregnant-title" class="left-align">Unsupported Pregnant Women</h6>
-      <strong><h5 id="pregnant-problem" class="left-align">Provide a week's worth of daily meals</h5></strong>
-    </div>
-  </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-  <!--Slider-->
-  <div class="row">
-    <h6 class="col s1">10</h6>
-    <h6 class="col s1"></h6>
-    <h6 class="col s1">1000</h6>
-    <h6 class="col s1"></h6>
-    <h6 class="col s1">2000</h6>
-    <h6 class="col s1"></h6>
-    <h6 class="col s1">3000</h6>
-    <h6 class="col s1"></h6>
-    <h6 class="col s1">4000</h6>
-    <h6 class="col s1"></h6>
-    <h6 class="col s1">5000</h6>
-    <h6 class="col s1" style="text-align: right">?</h6>
-    <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10"/>
-  </div>
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-  <!--Final Amount-->
-  <div id="final-amt-div" class="valign-wrapper row">
-    <div class="col s12 valign right-align">
-      <h5>I will give $</h5>
-    </div>
-    <div id="text-input-div" class="col s12">
-      <input id="text-input" class="valign" type="number" name="amountInput" value="10" style="display: inline" />
-    </div>
-    <div class="center-align col s12">
-      <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
-      <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
+          <ul class="nav navbar-nav">
+            <li><a href="#/">Home</a></li>
+            <li><a ng-href="#/message">Message</a></li>
+            <li><a ng-href="#/dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</form>
-<!--END OF GABRIELLE'S SLIDER-->
 
+  <div class="container">
+    <!--GABRIELLE'S SLIDER-->
+    <form id="slider-form">
+      <!--TITLE-->
+      <div>
+        <h1>Message of Hope</h1>
+      </div>
 
-<!-- CREDIT CARD FORM! -->
-<!-- NAV TABS FOR FORMS -->
-<div class="row">
-  <div class="col s12">
-    <ul class="tabs">
-      <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
-      <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
-    </ul>
-  </div>
-</div>
+      <!--Cause Box-->
+      <div class="row valign-wrapper" style="border: 1px solid black">
+        <div id="cause-color" class="col s6 center-align valign">
+          <h3 id="cause-name">DAY TO DAY</h3>
+          <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
+        </div>
+        <div id="cause-div" class="col s6 valign">
+          <h6 id="teen-title" class="left-align">Abused Teen Girls</h6>
+          <h5 id="teen-problem" class="left-align">Provide a week's worth of pocket money for school</h5>
+          <br>
+          <h6 id="pregnant-title" class="left-align">Unsupported Pregnant Women</h6>
+          <strong><h5 id="pregnant-problem" class="left-align">Provide a week's worth of daily meals</h5></strong>
+        </div>
+      </div>
 
-<!-- DONATION FORM: NON-TAX-RELIEF -->
-<div id="nonrelief">
-  <div class="row">
-    <form class="col s12">
+      <!--Slider-->
       <div class="row">
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Name</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
-          <input id="icon_donation1" type="tel" class="validate">
-          <label for="icon_donation1"></label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">payment</i>
-          <input id="icon_creditcard" type="tel" class="validate">
-          <label for="icon_creditcard">Credit Card No.</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">payment</i>
-          <input id="icon_expire" type="tel" class="validate">
-          <label for="icon_expire">Expiration Date</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <input type="checkbox" id="recurring1" />
-          <label for="recurring1">Make this a monthly contribution</label>
-          <div id="recurring-duration1" class="input-field col s6">
-            <form action="#">
-              <p>
-                <input name="group1" type="radio" id="duration-12" />
-                <label for="duration-12">for 12 months</label>
-              </p>
-              <p>
-                <input name="group1" type="radio" id="duration-24" />
-                <label for="duration-24">for 24 months</label>
-              </p>
-              <p>
-                <input name="group1" type="radio" id="duration-36" />
-                <label for="duration-36">for 36 months</label>
-              </p>
-            </form>
-          </div>
-        </div>
+        <h6 class="col s1">10</h6>
+        <h6 class="col s1"></h6>
+        <h6 class="col s1">1000</h6>
+        <h6 class="col s1"></h6>
+        <h6 class="col s1">2000</h6>
+        <h6 class="col s1"></h6>
+        <h6 class="col s1">3000</h6>
+        <h6 class="col s1"></h6>
+        <h6 class="col s1">4000</h6>
+        <h6 class="col s1"></h6>
+        <h6 class="col s1">5000</h6>
+        <h6 class="col s1" style="text-align: right">?</h6>
+        <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10"/>
+      </div>
 
-        <div class="input-field col s6">
-          <input type="checkbox" id="newsletter1" checked="checked" />
-          <label for="newsletter1">Subscribe to our Newsletter</label>
+      <!--Final Amount-->
+      <div id="final-amt-div" class="valign-wrapper row">
+        <div class="col s12 valign right-align">
+          <h5>I will give $</h5>
+        </div>
+        <div id="text-input-div" class="col s12">
+          <input id="text-input" class="valign" type="number" name="amountInput" value="10" style="display: inline" />
+        </div>
+        <div class="center-align col s12">
+          <a id="non-recurring-donate" class="btn orange darken-1">Once</a>
+          <a id="recurring-donate" class="btn orange darken-1">Monthly</a>
         </div>
       </div>
     </form>
-  </div>
-</div>
+    <!--END OF GABRIELLE'S SLIDER-->
 
-<!-- DONATION FORM: TAX-RELIEF -->
-<div id="relief">
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
 
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Name</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">picture_in_picture</i>
-          <input id="icon_nric" type="text" class="validate">
-          <label for="icon_nric">NRIC</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">work</i>
-          <input id="icon_company" type="text" class="validate">
-          <label for="icon_company">Company Reg. No.</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Contact No.</label>
-        </div>
-        <div class="input-field col s12">
-          <i class="material-icons prefix">location_on</i>
-          <input id="icon_address" type="tel" class="validate">
-          <label for="icon_address">Address</label>
-        </div>
-        <div class="input-field col s12">
-          <i class="material-icons prefix">email</i>
-          <input id="icon_email" type="tel" class="validate">
-          <label for="icon_email">Email</label>
-        </div>
-        <div class="input-field col s12">
-          <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
-          <input id="icon_donation2" type="tel" class="validate">
-          <label for="icon_donation2"></label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">payment</i>
-          <input id="icon_creditcard" type="tel" class="validate">
-          <label for="icon_creditcard">Credit Card No.</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">payment</i>
-          <input id="icon_expire" type="tel" class="validate">
-          <label for="icon_expire">Expiration Date</label>
-        </div>
-
-        <div class="input-field col s12 m6">
-          <input type="checkbox" id="recurring2" />
-          <label for="recurring2">Make this a monthly contribution</label>
-          <div id="recurring-duration2" class="input-field col s12 m6">
-            <form action="#">
-              <p>
-                <input name="group1" type="radio" id="duration-12" />
-                <label for="duration-12">for 12 months</label>
-              </p>
-              <p>
-                <input name="group1" type="radio" id="duration-24" />
-                <label for="duration-24">for 24 months</label>
-              </p>
-              <p>
-                <input name="group1" type="radio" id="duration-36" />
-                <label for="duration-36">for 36 months</label>
-              </p>
-            </form>
-          </div>
-        </div>
-
-        <div class="input-field col s6">
-          <input type="checkbox" id="newsletter2" checked="checked" />
-          <label for="newsletter2">Subscribe to our Newsletter</label>
-        </div>
-
+    <!-- CREDIT CARD FORM! -->
+    <!-- NAV TABS FOR FORMS -->
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a id="non" href="#nonrelief" class="active">Non Tax Relief</a></li>
+          <li class="tab col s3"><a id="tax" href="#relief">Tax Relief</a></li>
+        </ul>
       </div>
-    </form>
-  </div>
-</div>
+    </div>
 
-<div class="row">
-  <div class="row center-align">
-    <button id="submit-button" class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s3" type="submit" name="action">
-      SUBMIT
-    </button>
-  </div>
-</div>
+    <!-- DONATION FORM: NON-TAX-RELIEF -->
+    <div id="nonrelief">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
+              <input id="icon_donation1" type="tel" class="validate">
+              <label for="icon_donation1"></label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">payment</i>
+              <input id="icon_creditcard" type="tel" class="validate">
+              <label for="icon_creditcard">Credit Card No.</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">payment</i>
+              <input id="icon_expire" type="tel" class="validate">
+              <label for="icon_expire">Expiration Date</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input type="checkbox" id="recurring1" />
+              <label for="recurring1">Make this a monthly contribution</label>
+              <div id="recurring-duration1" class="input-field col s6">
+                <form action="#">
+                  <p>
+                    <input name="group1" type="radio" id="duration-12" />
+                    <label for="duration-12">for 12 months</label>
+                  </p>
+                  <p>
+                    <input name="group1" type="radio" id="duration-24" />
+                    <label for="duration-24">for 24 months</label>
+                  </p>
+                  <p>
+                    <input name="group1" type="radio" id="duration-36" />
+                    <label for="duration-36">for 36 months</label>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="checkbox" id="newsletter1" checked="checked" />
+              <label for="newsletter1">Subscribe to our Newsletter</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- DONATION FORM: TAX-RELIEF -->
+    <div id="relief">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">picture_in_picture</i>
+              <input id="icon_nric" type="text" class="validate">
+              <label for="icon_nric">NRIC</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">work</i>
+              <input id="icon_company" type="text" class="validate">
+              <label for="icon_company">Company Reg. No.</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label for="icon_telephone">Contact No.</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">location_on</i>
+              <input id="icon_address" type="tel" class="validate">
+              <label for="icon_address">Address</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_email" type="tel" class="validate">
+              <label for="icon_email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="fa fa-usd material-icons prefix" aria-hidden="true"></i>
+              <input id="icon_donation2" type="tel" class="validate">
+              <label for="icon_donation2"></label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">payment</i>
+              <input id="icon_creditcard" type="tel" class="validate">
+              <label for="icon_creditcard">Credit Card No.</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">payment</i>
+              <input id="icon_expire" type="tel" class="validate">
+              <label for="icon_expire">Expiration Date</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input type="checkbox" id="recurring2" />
+              <label for="recurring2">Make this a monthly contribution</label>
+              <div id="recurring-duration2" class="input-field col s12 m6">
+                <form action="#">
+                  <p>
+                    <input name="group1" type="radio" id="duration-12" />
+                    <label for="duration-12">for 12 months</label>
+                  </p>
+                  <p>
+                    <input name="group1" type="radio" id="duration-24" />
+                    <label for="duration-24">for 24 months</label>
+                  </p>
+                  <p>
+                    <input name="group1" type="radio" id="duration-36" />
+                    <label for="duration-36">for 36 months</label>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="checkbox" id="newsletter2" checked="checked" />
+              <label for="newsletter2">Subscribe to our Newsletter</label>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row center-align">
+        <button id="submit-button" class="btn waves-effect waves-light #fb8c00 orange darken-1 input-field col s3" type="submit" name="action">
+          SUBMIT
+        </button>
+      </div>
+    </div>
 </div>
 
 <script>
