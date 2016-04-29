@@ -25,7 +25,9 @@ angular.module('dayspringApp')
           //ADD TO FIREBASE
           $scope.messages.$add({
             from: name,
-            body: $scope.msg
+            body: $scope.msg,
+            user_id: 558978353,
+            amount: localStorage.amount || 5000
           });
 
           //RESET MESSAGE
@@ -47,5 +49,11 @@ angular.module('dayspringApp')
           $('#name label').addClass('active');
         }
       }
+
+      setTimeout(function () {
+        if (window.FB) {
+          FB.XFBML.parse();
+        }
+      }, 3000);
     }
   ]);

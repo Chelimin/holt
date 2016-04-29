@@ -35,11 +35,12 @@ angular.module('dayspringApp')
             })[0];
             var fbPost = message.body + '\n\nFrom: ' + message.from;
             FB.api(
-              '/' + page.id + '/feed',
+              '/' + page.id + '/photos',
               'POST',
               {
-                message: fbPost,
-                access_token: page.access_token
+                url: message.image_url,
+                access_token: page.access_token,
+                caption: fbPost
               },
               function (data) {
                 message.postedToFb = true;

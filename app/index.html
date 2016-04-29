@@ -24,21 +24,80 @@
     <!-- endbuild -->
   </head>
   <body ng-app="dayspringApp">
+    <script>
+      // This is called with the results from from FB.getLoginStatus().
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === 'connected') {
+          // Logged into your app and Facebook.
+          testAPI();
+        } else if (response.status === 'not_authorized') {
+          // The person is logged into Facebook, but not your app.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        } else {
+          // The person is not logged into Facebook, so we're not sure if
+          // they are logged into this app or not.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into Facebook.';
+        }
+      }
+      // This function is called when someone finishes with the Login
+      // Button.  See the onlogin handler attached to it in the sample
+      // code below.
+      function checkLoginState() {
+        if (window.FB) {
+          FB.getLoginStatus(function(response) {
+            console.log('getLoginStatus', response);
+            statusChangeCallback(response);
+          });
+        }
+      }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1671284589791250',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function testAPI() {
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function(response) {
 
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1671284589791250";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+        console.log('Successful login for: ' + response.name);
+        document.getElementById('status').innerHTML =
+          'Welcome to DaySpring, ' + response.name + '!';
+
+        // console.log('Successful login for: ' + response.name);
+        // document.getElementById('status').innerHTML =
+        //   'Thanks for logging in, ' + response.name + '!';
+        localStorage.name = response.name;
+        if (window.refreshController) {
+          window.refreshController();
+        }
+
+      });
+    }
+    </script>
     <!--Facebook Login Button social plugin-->
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div id="fb-root"></div>
-
-
     <!-- Add your site or application content here -->
     <div>
       <div class="ds-banner">
@@ -84,112 +143,22 @@
         <p>Made with <span class="glyphicon glyphicon-heart"></span> from the HOLT team</p>
       </div>
     </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
     <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/donation.js"></script>
-        <script src="scripts/controllers/message.js"></script>
-        <script src="scripts/controllers/dashboard.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/donation.js"></script>
+    <script src="scripts/controllers/message.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
 
-        <!-- Facebook SDK -->
-        <script>
-          // This is called with the results from from FB.getLoginStatus().
-          function statusChangeCallback(response) {
-            console.log('statusChangeCallback');
-            console.log(response);
-            // The response object is returned with a status field that lets the
-            // app know the current login status of the person.
-            // Full docs on the response object can be found in the documentation
-            // for FB.getLoginStatus().
-            if (response.status === 'connected') {
-              // Logged into your app and Facebook.
-              testAPI();
-            } else if (response.status === 'not_authorized') {
-              // The person is logged into Facebook, but not your app.
-              document.getElementById('status').innerHTML = 'Please log ' +
-                'into this app.';
-            } else {
-              // The person is not logged into Facebook, so we're not sure if
-              // they are logged into this app or not.
-              document.getElementById('status').innerHTML = 'Please log ' +
-                'into Facebook.';
-            }
-          }
-          // This function is called when someone finishes with the Login
-          // Button.  See the onlogin handler attached to it in the sample
-          // code below.
-          function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-              statusChangeCallback(response);
-            });
-          }
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '1671284589791250',
-              xfbml      : true,
-              version    : 'v2.6'
-            });
-          };
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        // Here we run a very simple test of the Graph API after login is
-        // successful.  See statusChangeCallback() for when this call is made.
-        function testAPI() {
-          console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', function(response) {
-
-            console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML =
-              'Welcome to DaySpring, ' + response.name + '!';
-
-            // console.log('Successful login for: ' + response.name);
-            // document.getElementById('status').innerHTML =
-            //   'Thanks for logging in, ' + response.name + '!';
-            localStorage.name = response.name;
-            if (window.refreshController) {
-              window.refreshController();
-            }
-
-          });
-        }
-        </script>
-
-
-        <script>
-          if(typeof(Storage) !== "undefined") {
-            console.log("This works!");
-          } else {
-            console.log("Sorry! No Web Storage support..");
-          }
-        </script>
-
-
-
-
-        <!-- endbuild -->
-        <div class="fb-like" data-href="https://www.facebook.com/dayspringmessageofhope" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+    <script>
+      $(function () {
+        checkLoginState();
+      });
+    </script>
 </body>
 </html>
