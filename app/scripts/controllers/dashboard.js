@@ -14,7 +14,8 @@ angular.module('dayspringApp')
       $scope.messages = $firebaseArray(ref);
 
       $scope.deleteMessage = function (message) {
-        $scope.messages.$remove(message);
+        message.hidden = true;
+        $scope.messages.$save(message);
       };
 
       $scope.totalAmount = function () {
@@ -24,15 +25,5 @@ angular.module('dayspringApp')
         });
         return total;
       };
-
-      // $scope.topThree = function () {
-      //   var messages = _.cloneDeep($scope.messages);
-      //   console.log(messages);
-      //   return _.sortBy(messages, function (obj) {
-      //     return obj.amount;
-      //   });
-      //   console.log(messages);
-      //   .slice(0, 3);
-      // }
     }
   ]);
