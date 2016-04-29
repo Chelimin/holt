@@ -30,7 +30,9 @@ angular.module('dayspringApp')
         FB.api(
           '/me/accounts',
           function (response) {
-            var page = response.data[0];
+            var page = _.first(response.data, function (page) {
+              return page.id === '577194379124444';
+            });
             var fbPost = message.body + '\n\nFrom: ' + message.from;
             FB.api(
               '/' + page.id + '/feed',
@@ -40,7 +42,7 @@ angular.module('dayspringApp')
                 access_token: page.access_token
               },
               function (data) {
-                console.log(data);
+                alert('Message posted');
               }
             );
           }
