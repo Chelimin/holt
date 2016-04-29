@@ -4,32 +4,29 @@
       <img class="ds-logo" src="images/logo.png">
     </div>
   </div>
+
   <div class="header ds-nav">
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-          <ul class="nav navbar-nav">
+    <nav>
+      <div class="nav-wrapper orange darken-3">
+        <div class="container">
+          <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
             <li><a href="#/">Home</a></li>
-            <li><a ng-href="#/message">Message</a></li>
-            <li><a ng-href="#/dashboard">Dashboard</a></li>
+            <li><a href="#/message">Message</a></li>
+            <li><a href="#/dashboard">Dashboard</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/message">Message</a></li>
+            <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </div>
 
   <div class="container">
+
     <!--GABRIELLE'S SLIDER-->
     <form id="slider-form">
       <!--TITLE-->
@@ -66,7 +63,7 @@
         <h6 class="col s1"></h6>
         <h6 class="col s1">5000</h6>
         <h6 class="col s1" style="text-align: right">?</h6>
-        <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10"/>
+        <input id="slider-input" class="row col s12" type="range" name="amountRange" min="10" max="5600" value="10" step="10" />
       </div>
 
       <!--Final Amount-->
@@ -242,211 +239,212 @@
         </button>
       </div>
     </div>
-</div>
+  </div>
 
-<script>
-  $(function pageLoaded() {
-
-    //SCRIPTS FOR FORM
-    $('ul.tabs').tabs();
-    $('select').material_select();
-    $('#recurring-duration1').hide();
-    $('#recurring-duration2').hide();
-
-    //SCRIPT FOR SLIDER
-    var array = [
-      //Range 1
-      {
-        color: '#ffecb3',
-        name: "DAY TO DAY",
-        icon: "fa fa-5x fa-usd",
-        teenProblem: "Provide a week's worth of pocket money for school",
-        pregnantProblem: "Provide a week's worth of daily meals"
-      },
-      //Range 2
-      {
-        color: '#ffd54f ',
-        name: "BASIC",
-        icon: "fa fa-5x fa-female",
-        teenProblem: "Provide her in-house education for a week",
-        pregnantProblem: "Provide residential services for a day"
-      },
-      //Range 3
-      {
-        color: '#ffc107 ',
-        name: "EDUCATION",
-        icon: "fa fa-5x fa-graduation-cap",
-        teenProblem: "Provide her in-house education for 1 month",
-        pregnantProblem: "Support her through counselling & prenatal classes"
-      },
-      //Range 4
-      {
-        color: '#ffa000 ',
-        name: "THERAPY",
-        icon: "fa fa-5x fa-heart",
-        teenProblem: "Support her counselling & clinical therapy for 1 month",
-        pregnantProblem: "Provide essentials for her new-born"
-      },
-      //Range 5
-      {
-        color: '#ff8f00 ',
-        name: "RESIDENTIAL",
-        icon: "fa fa-5x fa-home",
-        teenProblem: "Provide full residential services for 2 months",
-        pregnantProblem: "Provide residential services for 1 month"
-      },
-      //Range 6
-      {
-        color: '#ff6f00 ',
-        name: "FULL SUPPORT",
-        icon: "fa fa-5x fa-users",
-        teenProblem: "Support her education & clinical programmes for 2 months",
-        pregnantProblem: "Provide for a new mother & child for 2 months"
-      },
-      //Range 7
-      {
-        color: '#80cbc4 ',
-        name: "OTHERS",
-        icon: "fa fa-5x fa-gift",
-        teenProblem: "",
-        pregnantProblem: ""
-      }
-    ]
-
-    $("#text-input").on("input", function() {
-      $("#slider-input").val(this.value);
-      $("#icon_donation1").val(this.value);
-      $("#icon_donation2").val(this.value);
-      updateDisplay(this.value);
-    });
-
-    $("#slider-input").on("input", function() {
-      $("#text-input").val(this.value);
-      $("#icon_donation1").val(this.value);
-      $("#icon_donation2").val(this.value);
-      updateDisplay(this.value);
-    });
-
-    $("#icon_donation1").on("input", function() {
-      $("#slider-input").val(this.value);
-      $("#text-input").val(this.value);
-      updateDisplay(this.value);
-    })
-
-    $("#recurring-donate").on("click", function() {
-      $("#recurring1").attr("checked", true);
-      $("#recurring2").attr("checked", true);
-      $('#recurring-duration1').show();
-      $('#recurring-duration2').show();
-    });
-
-    $("#non-recurring-donate").on("click", function() {
-      $("#recurring1").attr("checked", false);
-      $("#recurring2").attr("checked", false);
+  <script>
+    $(function pageLoaded() {
+      //FOR SIDE NAV BAR
+      $(".button-collapse").sideNav();
+      //SCRIPTS FOR FORM
+      $('ul.tabs').tabs();
+      $('select').material_select();
       $('#recurring-duration1').hide();
       $('#recurring-duration2').hide();
-    });
 
-    $("#recurring1").on("change", function() {
-      if (this.checked == true) {
+      //SCRIPT FOR SLIDER
+      var array = [
+        //Range 1
+        {
+          color: '#ffecb3',
+          name: "DAY TO DAY",
+          icon: "fa fa-5x fa-usd",
+          teenProblem: "Provide a week's worth of pocket money for school",
+          pregnantProblem: "Provide a week's worth of daily meals"
+        },
+        //Range 2
+        {
+          color: '#ffd54f ',
+          name: "BASIC",
+          icon: "fa fa-5x fa-female",
+          teenProblem: "Provide her in-house education for a week",
+          pregnantProblem: "Provide residential services for a day"
+        },
+        //Range 3
+        {
+          color: '#ffc107 ',
+          name: "EDUCATION",
+          icon: "fa fa-5x fa-graduation-cap",
+          teenProblem: "Provide her in-house education for 1 month",
+          pregnantProblem: "Support her through counselling & prenatal classes"
+        },
+        //Range 4
+        {
+          color: '#ffa000 ',
+          name: "THERAPY",
+          icon: "fa fa-5x fa-heart",
+          teenProblem: "Support her counselling & clinical therapy for 1 month",
+          pregnantProblem: "Provide essentials for her new-born"
+        },
+        //Range 5
+        {
+          color: '#ff8f00 ',
+          name: "RESIDENTIAL",
+          icon: "fa fa-5x fa-home",
+          teenProblem: "Provide full residential services for 2 months",
+          pregnantProblem: "Provide residential services for 1 month"
+        },
+        //Range 6
+        {
+          color: '#ff6f00 ',
+          name: "FULL SUPPORT",
+          icon: "fa fa-5x fa-users",
+          teenProblem: "Support her education & clinical programmes for 2 months",
+          pregnantProblem: "Provide for a new mother & child for 2 months"
+        },
+        //Range 7
+        {
+          color: '#80cbc4 ',
+          name: "OTHERS",
+          icon: "fa fa-5x fa-gift",
+          teenProblem: "",
+          pregnantProblem: ""
+        }
+      ]
+
+      $("#text-input").on("input", function() {
+        $("#slider-input").val(this.value);
+        $("#icon_donation1").val(this.value);
+        $("#icon_donation2").val(this.value);
+        updateDisplay(this.value);
+      });
+
+      $("#slider-input").on("input", function() {
+        $("#text-input").val(this.value);
+        $("#icon_donation1").val(this.value);
+        $("#icon_donation2").val(this.value);
+        updateDisplay(this.value);
+      });
+
+      $("#icon_donation1").on("input", function() {
+        $("#slider-input").val(this.value);
+        $("#text-input").val(this.value);
+        updateDisplay(this.value);
+      })
+
+      $("#recurring-donate").on("click", function() {
+        $("#recurring1").attr("checked", true);
+        $("#recurring2").attr("checked", true);
         $('#recurring-duration1').show();
-      } else {
-        $('#recurring-duration1').hide();
-      }
-    });
-    $("#recurring2").on("change", function() {
-      if (this.checked == true) {
         $('#recurring-duration2').show();
-      } else {
+      });
+
+      $("#non-recurring-donate").on("click", function() {
+        $("#recurring1").attr("checked", false);
+        $("#recurring2").attr("checked", false);
+        $('#recurring-duration1').hide();
         $('#recurring-duration2').hide();
+      });
+
+      $("#recurring1").on("change", function() {
+        if (this.checked == true) {
+          $('#recurring-duration1').show();
+        } else {
+          $('#recurring-duration1').hide();
+        }
+      });
+      $("#recurring2").on("change", function() {
+        if (this.checked == true) {
+          $('#recurring-duration2').show();
+        } else {
+          $('#recurring-duration2').hide();
+        }
+      });
+
+      function updateDisplay(value) {
+        console.log(value);
+
+        if (value < 100) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[0].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[0].icon);
+          $("#cause-color").css({
+            'background-color': array[0].color
+          });
+          $('#teen-problem').html(array[0].teenProblem);
+          $('#pregnant-problem').html(array[0].pregnantProblem);
+        } else if (value < 500) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[1].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[1].icon);
+          $("#cause-color").css({
+            'background-color': array[1].color
+          });
+          $('#teen-problem').html(array[1].teenProblem);
+          $('#pregnant-problem').html(array[1].pregnantProblem);
+        } else if (value < 1000) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[2].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[2].icon);
+          $("#cause-color").css({
+            'background-color': array[2].color
+          });
+          $('#teen-problem').html(array[2].teenProblem);
+          $('#pregnant-problem').html(array[2].pregnantProblem);
+        } else if (value < 2000) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[3].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[3].icon);
+          $("#cause-color").css({
+            'background-color': array[3].color
+          });
+          $('#teen-problem').html(array[3].teenProblem);
+          $('#pregnant-problem').html(array[3].pregnantProblem);
+        } else if (value < 4999) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[4].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[4].icon);
+          $("#cause-color").css({
+            'background-color': array[4].color
+          });
+          $('#teen-problem').html(array[4].teenProblem);
+          $('#pregnant-problem').html(array[4].pregnantProblem);
+        } else if (value < 5599) {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[5].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[5].icon);
+          $("#cause-color").css({
+            'background-color': array[5].color
+          });
+          $('#teen-problem').html(array[5].teenProblem);
+          $('#pregnant-problem').html(array[5].pregnantProblem);
+        } else {
+          $("#pregnant-title").show();
+          $('#teen-title').show();
+          $("#cause-name").html(array[6].name);
+          $("#cause-icon").removeClass();
+          $("#cause-icon").addClass(array[6].icon);
+          $("#cause-color").css({
+            'background-color': array[6].color
+          });
+          $("#pregnant-title").hide();
+          $('#teen-title').hide();
+          $('#teen-problem').html("OMG you're so generous!");
+          $('#pregnant-problem').html("Please enter your donation amount below:");
+          // $('#teen-problem').html("THANK YOU!");
+          // $('#pregnant-problem').html("You're so generous!");
+        }
       }
     });
-
-    function updateDisplay(value) {
-      console.log(value);
-
-      if (value < 100) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[0].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[0].icon);
-        $("#cause-color").css({
-          'background-color': array[0].color
-        });
-        $('#teen-problem').html(array[0].teenProblem);
-        $('#pregnant-problem').html(array[0].pregnantProblem);
-      } else if (value < 500) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[1].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[1].icon);
-        $("#cause-color").css({
-          'background-color': array[1].color
-        });
-        $('#teen-problem').html(array[1].teenProblem);
-        $('#pregnant-problem').html(array[1].pregnantProblem);
-      } else if (value < 1000) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[2].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[2].icon);
-        $("#cause-color").css({
-          'background-color': array[2].color
-        });
-        $('#teen-problem').html(array[2].teenProblem);
-        $('#pregnant-problem').html(array[2].pregnantProblem);
-      } else if (value < 2000) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[3].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[3].icon);
-        $("#cause-color").css({
-          'background-color': array[3].color
-        });
-        $('#teen-problem').html(array[3].teenProblem);
-        $('#pregnant-problem').html(array[3].pregnantProblem);
-      } else if (value < 4999) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[4].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[4].icon);
-        $("#cause-color").css({
-          'background-color': array[4].color
-        });
-        $('#teen-problem').html(array[4].teenProblem);
-        $('#pregnant-problem').html(array[4].pregnantProblem);
-      } else if (value < 5599) {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[5].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[5].icon);
-        $("#cause-color").css({
-          'background-color': array[5].color
-        });
-        $('#teen-problem').html(array[5].teenProblem);
-        $('#pregnant-problem').html(array[5].pregnantProblem);
-      } else {
-        $("#pregnant-title").show();
-        $('#teen-title').show();
-        $("#cause-name").html(array[6].name);
-        $("#cause-icon").removeClass();
-        $("#cause-icon").addClass(array[6].icon);
-        $("#cause-color").css({
-          'background-color': array[6].color
-        });
-        $("#pregnant-title").hide();
-        $('#teen-title').hide();
-        $('#teen-problem').html("OMG you're so generous!");
-        $('#pregnant-problem').html("Please enter your donation amount below:");
-        // $('#teen-problem').html("THANK YOU!");
-        // $('#pregnant-problem').html("You're so generous!");
-      }
-    }
-  });
-</script>
+  </script>
