@@ -1,7 +1,7 @@
 <div>
   <div class="ds-banner">
-    <div class="container">
-      <img class="ds-logo" src="images/logo.png">
+    <div class="container row">
+      <img class="ds-logo col s12 m6 l6" src="images/logo.png">
     </div>
   </div>
 
@@ -10,13 +10,14 @@
       <div class="nav-wrapper orange darken-3">
         <div class="container">
           <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="left hide-on-med-and-down">
-            <li><a href="#/">Home</a></li>
+          <ul class="left hide-on-med-and-down valign-wrapper">
+            <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
+          <div id="status" class="right"></div>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="#/">Home</a></li>
+            <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
@@ -25,8 +26,13 @@
     </nav>
   </div>
 
-  <div class="container">
+  <!--Facebook Login Button social plugin-->
+  <div class="FB-login right">
+      <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" show_faces=true auto_logout_link="true">
+      </fb:login-button>
+  </div>
 
+  <div class="container">
     <!--GABRIELLE'S SLIDER-->
     <form id="slider-form">
       <!--TITLE-->
@@ -35,7 +41,7 @@
       </div>
 
       <!--Cause Box-->
-      <div class="row valign-wrapper" style="border: 1px solid black">
+      <div class="row valign-wrapper" style="border: 1px solid red accent-1">
         <div id="cause-color" class="col s6 center-align valign">
           <h3 id="cause-name">DAY TO DAY</h3>
           <i id="cause-icon" class="fa fa-5x fa-usd" aria-hidden="true"></i>
@@ -243,8 +249,6 @@
 
   <script>
     $(function pageLoaded() {
-      //FOR SIDE NAV BAR
-      $(".button-collapse").sideNav();
       //SCRIPTS FOR FORM
       $('ul.tabs').tabs();
       $('select').material_select();
@@ -326,6 +330,12 @@
       });
 
       $("#icon_donation1").on("input", function() {
+        $("#slider-input").val(this.value);
+        $("#text-input").val(this.value);
+        updateDisplay(this.value);
+      })
+
+      $("#icon_donation2").on("input", function() {
         $("#slider-input").val(this.value);
         $("#text-input").val(this.value);
         updateDisplay(this.value);
@@ -446,5 +456,6 @@
           // $('#pregnant-problem').html("You're so generous!");
         }
       }
+
     });
   </script>
