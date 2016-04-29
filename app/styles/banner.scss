@@ -4,7 +4,11 @@
 
 .ds-banner {
   height: 200px;
-  background: orange;
+  background-color: #ffa500;
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center -320px;
+  background-repeat: no-repeat;
 }
 
 .ds-nav .navbar {

@@ -32,5 +32,20 @@ angular.module('dayspringApp')
           $scope.msg = "";
         }
       };
+
+      showName();
+
+      window.refreshController = function () {
+        showName();
+        $scope.$apply();
+      }
+
+      function showName () {
+        if (localStorage.name) {
+          $scope.name = localStorage.name;
+          $('#name i').addClass('active');
+          $('#name label').addClass('active');
+        }
+      }
     }
   ]);
