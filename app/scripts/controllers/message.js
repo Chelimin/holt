@@ -10,6 +10,9 @@
 angular.module('dayspringApp')
   .controller('MessageCtrl', ['$scope', '$firebaseArray', '$location', '$anchorScroll',
     function ($scope, $firebaseArray, $location, $anchorScroll) {
+      $('.carousel').carousel();
+      $('.slider').slider({full_width: true});
+
       var ref = new window.Firebase('https://dayspring-hackathon.firebaseio.com/');
       $scope.messages = $firebaseArray(ref);
       $scope.addMessage = function() {

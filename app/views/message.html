@@ -1,71 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link type="text/css" rel="stylesheet" href="/styles/materialize_holt.css">
-</head>
-
-<body>
-
-
 <div>
-  <h1 class="center-align">Thank you!</h1>
-  <p class="lead">
-    <h5>Send a postcard to our residents: </h5>
+  <div class="ds-banner">
+    <img src="images/logo.png">
+  </div>
+  <div class="header">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
 
-    <div class="carousel">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-      <div class="postcard">
-      <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg" alt=""/></a>
-      <h3 class="postcardtext center-align">{{msg}}</h3>
-      <h5 class="postcardsubtext center-align">{{name}}</h5>
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li><a href="#/">Home</a></li>
+            <li><a ng-href="#/message">Message</a></li>
+            <li><a ng-href="#/dashboard">Dashboard</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="postcard">
-      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
-      <h3 class="postcardtext center-align">{{msg}}</h3>
-      <h5 class="postcardsubtext center-align">{{name}}</h5>
-      </div>
-
-      <div class="postcard">
-      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
-      <h3 class="postcardtext center-align">{{msg}}</h3>
-      <h5 class="postcardsubtext center-align">{{name}}</h5>
-      </div>
-
-      <div class="postcard">
-      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
-      <h3 class="postcardtext center-align">{{msg}}</h3>
-      <h5 class="postcardsubtext center-align">{{name}}</h5>
-      </div>
-
-      <div class="postcard">
-      <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-7.jpg"></a>
-      <h3 class="postcardtext center-align">{{msg}}</h3>
-      <h5 class="postcardsubtext center-align">{{name}}</h5>
-      </div>
-
+    </div>
   </div>
 
-    <form>
-      <div class="form-group">
-        <label for="message"></label>
-        <input type="text" class="form-control" ng-model="msg" placeholder="Message">
-      </div>
-      <div class="form-group">
-        <label for="from"></label>
-        <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
-      </div>
-      <!-- <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p> -->
-      <p class="right-align"><a class="waves-effect waves-light btn" ng-click="addMessage()"><i class="material-icons left">email</i>Send</a></p>
-    </form>
-  </p>
+  <div class="container">
+    <h1 class="center-align">Thank you!</h1>
+    <p class="lead">
+      <h5>Send a postcard to our residents: </h5>
+      <div class="carousel">
+        <div class="postcard">
+          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-5.jpg" alt=""/></a>
+          <h3 class="postcardtext center-align">{{msg}}</h3>
+          <h5 class="postcardsubtext center-align">{{name}}</h5>
+        </div>
 
-  <h3> Facebook feed & sharing buttons here</h3>
-  <hr>
-  <h3> Thank you, your message has been sent! </h3>
-  <div id="gallery"><h5> How others have shown their love: </h5></div>
+        <div class="postcard">
+          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-10.jpg"></a>
+          <h3 class="postcardtext center-align">{{msg}}</h3>
+          <h5 class="postcardsubtext center-align">{{name}}</h5>
+        </div>
 
+        <div class="postcard">
+          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-1.jpg"></a>
+          <h3 class="postcardtext center-align">{{msg}}</h3>
+          <h5 class="postcardsubtext center-align">{{name}}</h5>
+        </div>
+
+        <div class="postcard">
+          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-6.jpg"></a>
+          <h3 class="postcardtext center-align">{{msg}}</h3>
+          <h5 class="postcardsubtext center-align">{{name}}</h5>
+        </div>
+
+        <div class="postcard">
+          <a class="carousel-item"><img src="http://lorempixel.com/image_output/nature-q-c-640-480-7.jpg"></a>
+          <h3 class="postcardtext center-align">{{msg}}</h3>
+          <h5 class="postcardsubtext center-align">{{name}}</h5>
+        </div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="message"></label>
+          <input type="text" class="form-control" ng-model="msg" placeholder="Message">
+        </div>
+        <div class="form-group">
+          <label for="from"></label>
+          <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
+        </div>
+        <!-- <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p> -->
+        <p class="right-align"><a class="waves-effect waves-light btn" ng-click="addMessage()"><i class="material-icons left">email</i>Send</a></p>
+      </form>
+    </p>
+
+    <h3> Facebook feed & sharing buttons here</h3>
+    <hr>
+    <h3> Thank you, your message has been sent! </h3>
+    <div id="gallery"><h5> How others have shown their love: </h5></div>
     <div class="slider">
         <ul class="slides">
           <li>
@@ -97,25 +112,6 @@
             </div>
           </li>
         </ul>
-      </div>
-
+    </div>
   </div>
-
-  <!--Materializecss Carousel-->
-          <script>
-          $(document).ready(function(){
-            $('.carousel').carousel();
-          });
-          </script>
-
-  <!--Materializecss Slider-->
-          <script>
-              $(document).ready(function () {
-                  $('.slider').slider({full_width: true});
-              });
-          </script>
-
-
 </div>
-</body>
-</html>
