@@ -10,11 +10,21 @@
       <div class="nav-wrapper orange darken-3">
         <div class="container">
           <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="left hide-on-med-and-down">
+          <ul class="left hide-on-med-and-down valign-wrapper">
             <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
             <li><a href="#/dashboard">Dashboard</a></li>
           </ul>
+          <li class="right valign">
+            <!--Facebook Login Button social plugin-->
+            <fb:login-button scope="public_profile,email,publish_pages,status_update,publish_actions,manage_pages" onlogin="checkLoginState();">
+            </fb:login-button>
+          </li>
+          <li>
+            <div id="status"></div>
+          </li>
+
+
           <ul class="side-nav" id="mobile-demo">
             <li class="active"><a href="#/">Donate</a></li>
             <li><a href="#/message">Message</a></li>
@@ -26,7 +36,6 @@
   </div>
 
   <div class="container">
-
     <!--GABRIELLE'S SLIDER-->
     <form id="slider-form">
       <!--TITLE-->
@@ -450,7 +459,6 @@
           // $('#pregnant-problem').html("You're so generous!");
         }
       }
-      //FOR SIDE NAV BAR
-      $(".button-collapse").sideNav();
+
     });
   </script>
