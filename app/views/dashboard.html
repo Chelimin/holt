@@ -39,7 +39,7 @@
           <h6 class="ds-card-title">Top 3 Donors</h6>
           <hr/>
           <p ng-repeat="msg in messages | orderBy: '-amount' | limitTo: 3 track by $index">
-            {{$index + 1}}. {{ msg.from }} - {{ msg.amount }}
+            {{$index + 1}}. {{ msg.from }} - ${{ msg.amount }}
           </p>
         </div>
         <div class="card ds-card">
@@ -55,33 +55,25 @@
           <h6 class="ds-card-title">Total Donations To Date</h6>
           <div id="myDiv" style="width: 100%; height: 360px;"></div>
         </div>
-        <div class="card ds-card">
-          <div ng-repeat="msg in messages" class="row" ng-hide="msg.hidden">
-            <div class="col s12">
-              <div class="row">
-                <div class="col m9 s12">
-                  <h5 class="ds-card-title">{{ msg.from }}</h5>
-                  <p>{{ msg.body }}</p>
-                  <div>
-                    <span class="label label-info" ng-show="msg.postedToFb">Posted to Facebook</span>
-                  </div>
-                </div>
-                <div class="col m3 s12">
-                  <h4>${{ msg.amount }}</h4>
-                  <button class="waves-effect waves-light orange btn btn-flat"
-                    ng-click="postToFacebook(msg)" ng-hide="msg.postedToFb">
-                    Post to FB
-                  </button>
-                  <button class="waves-effect waves-light orange btn btn-flat"
-                    ng-click="deleteMessage(msg)" ng-show="!msg.postedToFb">
-                    Reject
-                  </button>
-                </div>
-              </div>
-              <hr/>
+        <ul class="collection">
+          <li class="collection-item avatar" ng-repeat="msg in messages" ng-hide="msg.hidden">
+            <img ng-src="{{getFBProfileUrl(msg.user_id)}}" class="circle">
+            <span class="title">{{ msg.from }}</span>
+            <p>{{ msg.body }}</p>
+            <div>
+              <span class="label label-info" ng-show="msg.postedToFb">Posted to Facebook</span>
             </div>
-          </div>
-        </div>
+            <h4>${{ msg.amount }}</h4>
+            <button class="waves-effect waves-light orange btn btn-flat"
+              ng-click="postToFacebook(msg)" ng-hide="msg.postedToFb">
+              Post to FB
+            </button>
+            <button class="waves-effect waves-light orange btn btn-flat"
+              ng-click="deleteMessage(msg)" ng-show="!msg.postedToFb">
+              Reject
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

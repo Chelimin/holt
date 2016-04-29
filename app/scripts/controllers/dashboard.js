@@ -50,5 +50,9 @@ angular.module('dayspringApp')
           }
         );
       };
+
+      $scope.getFBProfileUrl = function (id) {
+        return 'https://graph.facebook.com/' + id + '/picture?type=large';
+      }
     }
   ]);
