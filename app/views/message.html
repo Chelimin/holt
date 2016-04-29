@@ -1,8 +1,10 @@
 <div>
   <div class="ds-banner">
-    <img src="images/logo.png">
+    <div class="container">
+      <img class="ds-logo" src="images/logo.png">
+    </div>
   </div>
-  <div class="header">
+  <div class="header ds-nav">
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -65,12 +67,12 @@
 
       <form>
         <div class="form-group">
-          <label for="message"></label>
-          <input type="text" class="form-control" ng-model="msg" placeholder="Message">
-        </div>
-        <div class="form-group">
           <label for="from"></label>
           <input type="text" class="form-control" ng-model="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="message"></label>
+          <input type="text" class="form-control" ng-model="msg" placeholder="Message">
         </div>
         <!-- <p><a class="btn btn-lg btn-success" ng-click="addMessage()">Send</span></a></p> -->
         <p class="right-align"><a class="waves-effect waves-light btn" ng-click="addMessage()"><i class="material-icons left">email</i>Send</a></p>
