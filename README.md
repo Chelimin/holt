@@ -20,6 +20,14 @@ Running the development app:
 gulp serve
 ```
 
+Building to gh-pages:
+
+```
+gulp
+bash deploy.sh
+```
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
