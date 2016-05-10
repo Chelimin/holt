@@ -181,13 +181,13 @@ gulp.task('client:build', ['bower', 'html', 'styles'], function () {
 
   return gulp.src(paths.views.bowermain)
     .pipe($.useref({searchPath: [yeoman.app, yeoman.temp]}))
-    .pipe(jsFilter)
-    .pipe($.ngAnnotate())
-    .pipe($.uglify())
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    .pipe($.minifyCss({cache: true}))
-    .pipe(cssFilter.restore())
+    // .pipe(jsFilter)
+    // .pipe($.ngAnnotate())
+    // .pipe($.uglify())
+    // .pipe(jsFilter.restore())
+    // .pipe(cssFilter)
+    // .pipe($.minifyCss({cache: true}))
+    // .pipe(cssFilter.restore())
     .pipe(gulp.dest(yeoman.dist));
 });
 
@@ -198,11 +198,11 @@ gulp.task('html', function () {
 
 gulp.task('images', function () {
   return gulp.src(yeoman.app + '/images/**/*')
-    .pipe($.cache($.imagemin({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })))
+    // .pipe($.cache($.imagemin({
+    //     optimizationLevel: 5,
+    //     progressive: true,
+    //     interlaced: true
+    // })))
     .pipe(gulp.dest(yeoman.dist + '/images'));
 });
 
@@ -212,7 +212,9 @@ gulp.task('copy:extras', function () {
 });
 
 gulp.task('copy:fonts', function () {
-  return gulp.src('./bower_components/bootstrap/dist/fonts/**/*')
+  return gulp.src([
+    './bower_components/bootstrap/dist/fonts/**/*',
+    './bower_components/Materialize/dist/fonts/**/*'])
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
 

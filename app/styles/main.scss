@@ -148,7 +148,52 @@ i {
 
 
 @media only screen and (max-width: 320px) {
+  #cause-name { font-size: 1.2em; }
+}
 
-   #cause-name { font-size: 1.2em; }
+.carousel .carousel-item {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
+.carousel .carousel-item img {
+  width: 100%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 0;
+  height: 0;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.postcard {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+.postcardtext {
+   position: absolute;
+   top: 100px;
+   left: 0;
+   width: 100%;
+   color: white;
+}
+
+.postcardsubtext {
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
+   color: white;
 }
