@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DaySpring</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-app="dayspringApp">
+    <script>
+      // This is called with the results from from FB.getLoginStatus().
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === 'connected') {
+          // Logged into your app and Facebook.
+          testAPI();
+        } else if (response.status === 'not_authorized') {
+          // The person is logged into Facebook, but not your app.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+        } else {
+          // The person is not logged into Facebook, so we're not sure if
+          // they are logged into this app or not.
+          document.getElementById('status').innerHTML = 'Please log ' +
+            'into Facebook.';
+        }
+      }
+      // This function is called when someone finishes with the Login
+      // Button.  See the onlogin handler attached to it in the sample
+      // code below.
+      function checkLoginState() {
+        if (window.FB) {
+          FB.getLoginStatus(function(response) {
+            console.log('getLoginStatus', response);
+            statusChangeCallback(response);
+          });
+        }
+      }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1671284589791250',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function testAPI() {
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function(response) {
+        document.getElementById('status').innerHTML =
+          'Welcome to DaySpring, ' + response.name + '!';
+
+        // console.log('Successful login for: ' + response.name);
+        // document.getElementById('status').innerHTML =
+        //   'Thanks for logging in, ' + response.name + '!';
+        localStorage.name = response.name;
+        localStorage.id = response.id;
+        if (window.refreshController) {
+          window.refreshController();
+        }
+
+      });
+    }
+    </script>
+    <!--Facebook Login Button social plugin-->
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="fb-root"></div>
+    <!-- Add your site or application content here -->
+    <div>
+      <div class="ds-banner">
+        <div class="container row">
+          <img class="ds-logo col s12 m6 l6" src="images/logo.png">
+        </div>
+      </div>
+
+      <div class="header ds-nav">
+        <nav>
+          <div class="nav-wrapper orange darken-3">
+            <div class="container">
+              <a href="#/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="left hide-on-med-and-down valign-wrapper">
+                <li><a href="#/">Donate</a></li>
+                <li><a href="#/message">Message</a></li>
+                <li><a href="#/dashboard">Dashboard</a></li>
+              </ul>
+              <ul class="right hide-on-med-and-down valign-wrapper">
+                <div id="status"></div>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li class="active"><a href="#/">Donate</a></li>
+                <li><a href="#/message">Message</a></li>
+                <li><a href="#/dashboard">Dashboard</a></li>
+              </ul>
+              <div class="FB-login right">
+                <fb:login-button scope="public_profile,email,publish_pages,manage_pages" onlogin="checkLoginState();" auto_logout_link="true"></fb:login-button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!--Facebook Login Button social plugin-->
+      <div class="container">
+        <div ng-view="">
+        </div>
+      </div>
+
+    <div class="footer">
+      <div class="container">
+        <p>Made with <span class="glyphicon glyphicon-heart"></span> from the HOLT team</p>
+      </div>
+    </div>
+    <script src="scripts/vendor.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+    <script>
+      $(function () {
+        checkLoginState();
+      });
+    </script>
+</body>
+</html>

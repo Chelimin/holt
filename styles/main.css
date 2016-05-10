@@ -1,0 +1,287 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+  /* Make the masthead heading the same height as the navigation */
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+i {
+  text-align: center;
+}
+
+/*SLIDER SECTION*/
+#slider-form {
+  padding: 20px;
+}
+
+.slider-label-1 {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#slider-input {
+  margin-top: 0px;
+}
+
+/*DONATION DESCRIPTION SECTION*/
+#cause-div {
+  padding-left: 30px;
+}
+
+#cause-color {
+  height: 300px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#cause-div {
+  padding: 0, 20px;
+}
+
+#teen-problem, #pregnant-problem {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*FINAL AMOUNT DIV*/
+#text-input {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  display: inline;
+}
+
+.btn {
+  margin: 10px;
+}
+
+/*NON-TAX RELIEF AND TAX-RELIEF SECTION TABS*/
+#non, #tax {
+  text-decoration: none;
+  color: black;
+}
+
+#icon_donation1, #icon_donation2 {
+  font-size: 18px;
+}
+
+#submit-button {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.thumb.active {
+  display: none;
+}
+
+@media only screen and (max-width: 320px) {
+  #cause-name {
+    font-size: 1.2em;
+  }
+}
+
+.carousel .carousel-item {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 0;
+  height: 0;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.postcard {
+  position: relative;
+  width: 100%;
+  /* for IE 6 */
+}
+
+.postcardtext {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+.postcardsubtext {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+.container {
+  max-width: 1024px;
+}
+
+.ds-banner {
+  height: 200px;
+  background-color: #ffa500;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.ds-nav .navbar {
+  background: #ef6c00;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff3e0;
+}
+
+.navbar-default {
+  border: none;
+}
+
+.ds-logo {
+  max-width: 196px;
+  margin-top: 50px;
+}
+
+body {
+  background-color: #f4f5f6 !important;
+}
+
+.ds-card {
+  padding: 30px;
+}
+
+.ds-card-title {
+  color: #e65100;
+}
+
+.FB-login {
+  -webkit-transform: translateY(-20px) translateX(-72px);
+          transform: translateY(-20px) translateX(-72px);
+}
+
+.footer {
+  border-top: none;
+  background-color: #fff;
+}
+
+#cause-box {
+  background-color: #e8e8e8;
+}
+
+#cause-color {
+  background-size: cover;
+  background-position: center center;
+}
+
+#cause-color #cause-name {
+  color: #fff;
+}
+
+#cause-color #cause-icon {
+  color: #fff;
+}
+
+#submit-button {
+  max-width: 256px;
+}
+
+nav ul a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+#cause-name {
+  margin-top: 70px;
+}
