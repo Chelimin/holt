@@ -11,7 +11,7 @@
       <div class="card ds-card">
         <h6 class="ds-card-title">Top 3 Donors</h6>
         <hr/>
-        <p ng-repeat="msg in messages | orderBy: '-amount' | limitTo: 3 track by $index">
+        <p ng-repeat="msg in messages | orderBy:orderByAmount:true | limitTo: 3 track by $index">
           {{$index + 1}}. {{ msg.from }} - ${{ msg.amount }}
         </p>
       </div>

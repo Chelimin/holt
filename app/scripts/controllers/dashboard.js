@@ -85,5 +85,9 @@ angular.module('dayspringApp')
           $a.get(0).click();
           $a.remove();
       }
+
+      $scope.orderByAmount = function (message) {
+          return parseFloat(message.amount);
+      };
     }
   ]);
